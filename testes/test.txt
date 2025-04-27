@@ -1,0 +1,6 @@
+a1 = 1;
+leia (a1);
+se a1!=b1 entao
+escreva (a1);
+senao escreva(b1);
+fim
