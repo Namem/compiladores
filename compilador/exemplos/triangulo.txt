@@ -1,0 +1,13 @@
+leia(a);
+leia(b);
+leia(c);
+
+se a == b && b == c entao
+    escreva("Equilatero");
+senao
+    se a == b || a == c || b == c entao
+        escreva("Isosceles");
+    senao
+        escreva("Escaleno");
+    fim
+fim
