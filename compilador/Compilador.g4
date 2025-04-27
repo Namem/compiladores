@@ -43,6 +43,8 @@ expressao
     | expressao MINUS expressao
     | expressao AND expressao
     | expressao OR expressao
+    | expressao GT expressao    
+    | expressao LT expressao   
     | NOT expressao
     | expressao EQ expressao
     | LPAREN expressao RPAREN
