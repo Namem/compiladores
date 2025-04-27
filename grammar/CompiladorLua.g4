@@ -1,4 +1,4 @@
-grammar CompiladorLua;
+grammar MiniLua;
 
 /* Regras de Início */
 programa : bloco EOF ;
@@ -34,7 +34,7 @@ exprAnd
     ;
 
 exprIgualdade
-    : exprComparacao (('==' | '!=' | '<' | '<=' | '>' | '>=') exprComparacao)*
+    : exprComparacao (('==' | '~=' | '<' | '<=' | '>' | '>=') exprComparacao)*
     ;
 
 exprComparacao
