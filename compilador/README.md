@@ -1,37 +1,22 @@
-# Compilador Simples baseado em Lua
+# Compilador Simples
 
-Este projeto é um compilador feito em Python com ANTLR, inspirado na linguagem Lua, como parte do curso de Construção de Compiladores.
+Este projeto é um compilador simples desenvolvido para a disciplina de Construção de Compiladores.  
+O compilador é baseado em uma linguagem inspirada no **Lua**, com todos os tokens e palavras-chave em **português**.
 
-## Funcionalidades
+## 📋 Funcionalidades
 
-- Tipos primitivos: `int`, `string`
-- Entrada/Saída: `leia()`, `escreva()`
-- Controle de fluxo: `se...entao...senao`, `enquanto...faca`
-- Expressões aritméticas: `+`, `-`, `*`, `/`
-- Expressões lógicas: `&&`, `||`, `!`, `==`
-- Expressões relacionais: `>`, `<`
+- **Tipos suportados**: números inteiros (`int`) e strings (`string`)
+- **Comandos**:
+  - Entrada: `leia`
+  - Saída: `escreva`
+  - Atribuições
+  - Condicionais: `se ... entao ... senao ... fim`
+  - Repetições: `enquanto ... faca ... fim`
+- **Operadores**:
+  - Aritméticos: `+`, `-`, `*`, `/`
+  - Lógicos: `&&`, `||`, `!`
+  - Comparações: `==`, `~=`, `>`, `<`, `>=`, `<=`
+- **Comentários**: linha iniciada com `--`
 
-## Como Executar
-
-1. Instale o runtime do ANTLR para Python:
-    ```bash
-    pip install -r requirements.txt
-    ```
-
-2. Gere o lexer e o parser:
-    ```bash
-    antlr4 -Dlanguage=Python3 Compilador.g4
-    ```
-
-3. Execute o compilador em um arquivo de exemplo:
-    ```bash
-    python driver.py exemplos/triangulo.txt
-    ```
-
-4. Visualize a árvore sintática (AST):
-    ```bash
-    dot -Tpng ast.dot -o ast.png
-    ```
-
-## Estrutura de Pastas
+## 📂 Estrutura do Projeto
 
