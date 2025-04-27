@@ -1,4 +1,5 @@
 leia(n);
+
 enquanto n > 0 faca
     escreva(n);
     n = n - 1;

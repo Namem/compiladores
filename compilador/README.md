@@ -1,29 +1,37 @@
-# Compilador Simples
+# Compilador Simples baseado em Lua
 
-Este projeto é um compilador baseado em uma linguagem inspirada no Lua, desenvolvido em Python usando ANTLR.
+Este projeto é um compilador feito em Python com ANTLR, inspirado na linguagem Lua, como parte do curso de Construção de Compiladores.
 
 ## Funcionalidades
 
-- Tipos: `int`, `string`
+- Tipos primitivos: `int`, `string`
 - Entrada/Saída: `leia()`, `escreva()`
 - Controle de fluxo: `se...entao...senao`, `enquanto...faca`
-- Operadores: `+`, `-`, `*`, `/`, `&&`, `||`, `!`, `==`
+- Expressões aritméticas: `+`, `-`, `*`, `/`
+- Expressões lógicas: `&&`, `||`, `!`, `==`
+- Expressões relacionais: `>`, `<`
 
-## Como executar
+## Como Executar
 
-1. Gere o parser:
+1. Instale o runtime do ANTLR para Python:
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+2. Gere o lexer e o parser:
     ```bash
     antlr4 -Dlanguage=Python3 Compilador.g4
     ```
 
-2. Rode o driver:
+3. Execute o compilador em um arquivo de exemplo:
     ```bash
-    python driver.py exemplos/pascal.txt
+    python driver.py exemplos/triangulo.txt
     ```
 
-## Visualizar a AST
+4. Visualize a árvore sintática (AST):
+    ```bash
+    dot -Tpng ast.dot -o ast.png
+    ```
 
-Após executar, será gerado o arquivo `ast.dot`. Para visualizar:
+## Estrutura de Pastas
 
-```bash
-dot -Tpng ast.dot -o ast.png

@@ -17,6 +17,15 @@ class CompiladorListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by CompiladorParser#bloco.
+    def enterBloco(self, ctx:CompiladorParser.BlocoContext):
+        pass
+
+    # Exit a parse tree produced by CompiladorParser#bloco.
+    def exitBloco(self, ctx:CompiladorParser.BlocoContext):
+        pass
+
+
     # Enter a parse tree produced by CompiladorParser#comando.
     def enterComando(self, ctx:CompiladorParser.ComandoContext):
         pass
@@ -26,12 +35,21 @@ class CompiladorListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by CompiladorParser#declaracao.
-    def enterDeclaracao(self, ctx:CompiladorParser.DeclaracaoContext):
+    # Enter a parse tree produced by CompiladorParser#leitura.
+    def enterLeitura(self, ctx:CompiladorParser.LeituraContext):
         pass
 
-    # Exit a parse tree produced by CompiladorParser#declaracao.
-    def exitDeclaracao(self, ctx:CompiladorParser.DeclaracaoContext):
+    # Exit a parse tree produced by CompiladorParser#leitura.
+    def exitLeitura(self, ctx:CompiladorParser.LeituraContext):
+        pass
+
+
+    # Enter a parse tree produced by CompiladorParser#escrita.
+    def enterEscrita(self, ctx:CompiladorParser.EscritaContext):
+        pass
+
+    # Exit a parse tree produced by CompiladorParser#escrita.
+    def exitEscrita(self, ctx:CompiladorParser.EscritaContext):
         pass
 
 
@@ -41,24 +59,6 @@ class CompiladorListener(ParseTreeListener):
 
     # Exit a parse tree produced by CompiladorParser#atribuicao.
     def exitAtribuicao(self, ctx:CompiladorParser.AtribuicaoContext):
-        pass
-
-
-    # Enter a parse tree produced by CompiladorParser#entrada.
-    def enterEntrada(self, ctx:CompiladorParser.EntradaContext):
-        pass
-
-    # Exit a parse tree produced by CompiladorParser#entrada.
-    def exitEntrada(self, ctx:CompiladorParser.EntradaContext):
-        pass
-
-
-    # Enter a parse tree produced by CompiladorParser#saida.
-    def enterSaida(self, ctx:CompiladorParser.SaidaContext):
-        pass
-
-    # Exit a parse tree produced by CompiladorParser#saida.
-    def exitSaida(self, ctx:CompiladorParser.SaidaContext):
         pass
 
 
@@ -80,21 +80,84 @@ class CompiladorListener(ParseTreeListener):
         pass
 
 
-    # Enter a parse tree produced by CompiladorParser#expressao.
-    def enterExpressao(self, ctx:CompiladorParser.ExpressaoContext):
+    # Enter a parse tree produced by CompiladorParser#expr.
+    def enterExpr(self, ctx:CompiladorParser.ExprContext):
         pass
 
-    # Exit a parse tree produced by CompiladorParser#expressao.
-    def exitExpressao(self, ctx:CompiladorParser.ExpressaoContext):
+    # Exit a parse tree produced by CompiladorParser#expr.
+    def exitExpr(self, ctx:CompiladorParser.ExprContext):
         pass
 
 
-    # Enter a parse tree produced by CompiladorParser#tipo.
-    def enterTipo(self, ctx:CompiladorParser.TipoContext):
+    # Enter a parse tree produced by CompiladorParser#exprLogico.
+    def enterExprLogico(self, ctx:CompiladorParser.ExprLogicoContext):
         pass
 
-    # Exit a parse tree produced by CompiladorParser#tipo.
-    def exitTipo(self, ctx:CompiladorParser.TipoContext):
+    # Exit a parse tree produced by CompiladorParser#exprLogico.
+    def exitExprLogico(self, ctx:CompiladorParser.ExprLogicoContext):
+        pass
+
+
+    # Enter a parse tree produced by CompiladorParser#exprAnd.
+    def enterExprAnd(self, ctx:CompiladorParser.ExprAndContext):
+        pass
+
+    # Exit a parse tree produced by CompiladorParser#exprAnd.
+    def exitExprAnd(self, ctx:CompiladorParser.ExprAndContext):
+        pass
+
+
+    # Enter a parse tree produced by CompiladorParser#exprIgualdade.
+    def enterExprIgualdade(self, ctx:CompiladorParser.ExprIgualdadeContext):
+        pass
+
+    # Exit a parse tree produced by CompiladorParser#exprIgualdade.
+    def exitExprIgualdade(self, ctx:CompiladorParser.ExprIgualdadeContext):
+        pass
+
+
+    # Enter a parse tree produced by CompiladorParser#exprComparacao.
+    def enterExprComparacao(self, ctx:CompiladorParser.ExprComparacaoContext):
+        pass
+
+    # Exit a parse tree produced by CompiladorParser#exprComparacao.
+    def exitExprComparacao(self, ctx:CompiladorParser.ExprComparacaoContext):
+        pass
+
+
+    # Enter a parse tree produced by CompiladorParser#exprAritmetica.
+    def enterExprAritmetica(self, ctx:CompiladorParser.ExprAritmeticaContext):
+        pass
+
+    # Exit a parse tree produced by CompiladorParser#exprAritmetica.
+    def exitExprAritmetica(self, ctx:CompiladorParser.ExprAritmeticaContext):
+        pass
+
+
+    # Enter a parse tree produced by CompiladorParser#termo.
+    def enterTermo(self, ctx:CompiladorParser.TermoContext):
+        pass
+
+    # Exit a parse tree produced by CompiladorParser#termo.
+    def exitTermo(self, ctx:CompiladorParser.TermoContext):
+        pass
+
+
+    # Enter a parse tree produced by CompiladorParser#fator.
+    def enterFator(self, ctx:CompiladorParser.FatorContext):
+        pass
+
+    # Exit a parse tree produced by CompiladorParser#fator.
+    def exitFator(self, ctx:CompiladorParser.FatorContext):
+        pass
+
+
+    # Enter a parse tree produced by CompiladorParser#literal.
+    def enterLiteral(self, ctx:CompiladorParser.LiteralContext):
+        pass
+
+    # Exit a parse tree produced by CompiladorParser#literal.
+    def exitLiteral(self, ctx:CompiladorParser.LiteralContext):
         pass
 
 

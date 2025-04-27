@@ -1,93 +1,106 @@
 grammar Compilador;
 
-// REGRAS DE PARSER
-programa: (comando)* EOF;
+/* Regras de Início */
+programa : bloco EOF ;
+
+bloco : (comando)* ;
 
 comando
-    : declaracao
+    : leitura
+    | escrita
     | atribuicao
-    | entrada
-    | saida
     | condicional
     | repeticao
     ;
 
-declaracao
-    : tipo ID SEMI
+/* Comandos */
+leitura    : LEIA ABREPAR IDENT FECHAPAR PONTOVIRGULA ;
+escrita    : ESCREVA ABREPAR expr FECHAPAR PONTOVIRGULA ;
+atribuicao : IDENT ATRIBUICAO expr PONTOVIRGULA ;
+condicional: SE expr ENTAO bloco (SENAO bloco)? FIM ;
+repeticao  : ENQUANTO expr FACA bloco FIM ;
+
+/* Expressões */
+expr : exprLogico ;
+
+exprLogico
+    : exprLogico OU exprAnd   
+    | exprAnd                   
     ;
 
-atribuicao
-    : ID ASSIGN expressao SEMI
+exprAnd
+    : exprAnd E exprIgualdade  
+    | exprIgualdade              
     ;
 
-entrada
-    : LEIA LPAREN ID RPAREN SEMI
+exprIgualdade
+    : exprComparacao ( (IGUAL | DIFERENTE | MENOR | MENORIGUAL | MAIOR | MAIORIGUAL) exprComparacao )*
     ;
 
-saida
-    : ESCREVA LPAREN expressao RPAREN SEMI
+exprComparacao
+    : exprAritmetica
     ;
 
-condicional
-    : SE expressao ENTAO (comando)* (SENAO (comando)*)? FIM
+exprAritmetica
+    : exprAritmetica (SOMA|SUB) termo  
+    | termo                          
     ;
 
-repeticao
-    : ENQUANTO expressao FACA (comando)* FIM
+termo
+    : termo (MULT|DIV) fator  
+    | fator                
     ;
 
-expressao
-    : expressao MULT expressao
-    | expressao DIV expressao
-    | expressao PLUS expressao
-    | expressao MINUS expressao
-    | expressao AND expressao
-    | expressao OR expressao
-    | expressao GT expressao    
-    | expressao LT expressao   
-    | NOT expressao
-    | expressao EQ expressao
-    | LPAREN expressao RPAREN
-    | INT
+fator
+    : ABREPAR expr FECHAPAR       
+    | SUB fator           
+    | NAO fator         
+    | literal            
+    | IDENT              
+    ;
+
+/* Literais */
+literal
+    : INT
     | STRING
-    | ID
     ;
 
-tipo
-    : INT_TIPO
-    | STRING_TIPO
-    ;
-
-// TOKENS DE LÉXICO
-LEIA: 'leia';
-ESCREVA: 'escreva';
-SE: 'se';
-SENAO: 'senao';
-ENTAO: 'entao';
-FIM: 'fim';
+/* Palavras Reservadas (ANTES DO IDENT) */
+LEIA    : 'leia';
+ESCREVA : 'escreva';
+SE      : 'se';
+SENAO   : 'senao';
+ENTAO   : 'entao';
+FIM     : 'fim';
 ENQUANTO: 'enquanto';
-FACA: 'faca';
+FACA    : 'faca';
 
-INT_TIPO: 'int';
-STRING_TIPO: 'string';
+/* Tokens Literais */
+INT    : [0-9]+ ;
+STRING : '"' (~["\\] | '\\' .)* '"' ;
 
-ID: [a-zA-Z_][a-zA-Z0-9_]*;
-INT: [0-9]+;
-STRING: '"' .*? '"';
+/* Identificadores */
+IDENT  : [a-zA-Z_][a-zA-Z0-9_]* ;
 
-LPAREN: '(';
-RPAREN: ')';
-SEMI: ';';
-ASSIGN: '=';
-PLUS: '+';
-MINUS: '-';
-MULT: '*';
-DIV: '/';
-AND: '&&';
-OR: '||';
-NOT: '!';
-EQ: '==';
-GT: '>';
-LT: '<';
+/* Operadores e Símbolos */
+ABREPAR     : '(';
+FECHAPAR    : ')';
+PONTOVIRGULA: ';';
+ATRIBUICAO  : '=';
+SOMA        : '+';
+SUB         : '-';
+MULT        : '*';
+DIV         : '/';
+E           : '&&';
+OU          : '||';
+NAO         : '!';
+IGUAL       : '==';
+DIFERENTE   : '~=';
+MAIOR       : '>';
+MENOR       : '<';
+MAIORIGUAL  : '>=';
+MENORIGUAL  : '<=';
 
-WS: [ \t\r\n]+ -> skip;
+/* Espaços e Comentários */
+WS          : [ \t\r\n]+ -> skip ;
+COMENTARIO  : '--' ~[\r\n]* -> skip ;

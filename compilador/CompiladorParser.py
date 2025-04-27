@@ -10,51 +10,56 @@ else:
 
 def serializedATN():
     return [
-        4,1,28,135,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
-        6,2,7,7,7,2,8,7,8,2,9,7,9,1,0,5,0,22,8,0,10,0,12,0,25,9,0,1,0,1,
-        0,1,1,1,1,1,1,1,1,1,1,1,1,3,1,35,8,1,1,2,1,2,1,2,1,2,1,3,1,3,1,3,
-        1,3,1,3,1,4,1,4,1,4,1,4,1,4,1,4,1,5,1,5,1,5,1,5,1,5,1,5,1,6,1,6,
-        1,6,1,6,5,6,62,8,6,10,6,12,6,65,9,6,1,6,1,6,5,6,69,8,6,10,6,12,6,
-        72,9,6,3,6,74,8,6,1,6,1,6,1,7,1,7,1,7,1,7,5,7,82,8,7,10,7,12,7,85,
-        9,7,1,7,1,7,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,3,8,99,8,8,1,
-        8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,
-        8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,5,8,128,8,8,10,8,12,8,
-        131,9,8,1,9,1,9,1,9,0,1,16,10,0,2,4,6,8,10,12,14,16,18,0,1,1,0,9,
-        10,147,0,23,1,0,0,0,2,34,1,0,0,0,4,36,1,0,0,0,6,40,1,0,0,0,8,45,
-        1,0,0,0,10,51,1,0,0,0,12,57,1,0,0,0,14,77,1,0,0,0,16,98,1,0,0,0,
-        18,132,1,0,0,0,20,22,3,2,1,0,21,20,1,0,0,0,22,25,1,0,0,0,23,21,1,
-        0,0,0,23,24,1,0,0,0,24,26,1,0,0,0,25,23,1,0,0,0,26,27,5,0,0,1,27,
-        1,1,0,0,0,28,35,3,4,2,0,29,35,3,6,3,0,30,35,3,8,4,0,31,35,3,10,5,
-        0,32,35,3,12,6,0,33,35,3,14,7,0,34,28,1,0,0,0,34,29,1,0,0,0,34,30,
-        1,0,0,0,34,31,1,0,0,0,34,32,1,0,0,0,34,33,1,0,0,0,35,3,1,0,0,0,36,
-        37,3,18,9,0,37,38,5,11,0,0,38,39,5,16,0,0,39,5,1,0,0,0,40,41,5,11,
-        0,0,41,42,5,17,0,0,42,43,3,16,8,0,43,44,5,16,0,0,44,7,1,0,0,0,45,
-        46,5,1,0,0,46,47,5,14,0,0,47,48,5,11,0,0,48,49,5,15,0,0,49,50,5,
-        16,0,0,50,9,1,0,0,0,51,52,5,2,0,0,52,53,5,14,0,0,53,54,3,16,8,0,
-        54,55,5,15,0,0,55,56,5,16,0,0,56,11,1,0,0,0,57,58,5,3,0,0,58,59,
-        3,16,8,0,59,63,5,5,0,0,60,62,3,2,1,0,61,60,1,0,0,0,62,65,1,0,0,0,
-        63,61,1,0,0,0,63,64,1,0,0,0,64,73,1,0,0,0,65,63,1,0,0,0,66,70,5,
-        4,0,0,67,69,3,2,1,0,68,67,1,0,0,0,69,72,1,0,0,0,70,68,1,0,0,0,70,
-        71,1,0,0,0,71,74,1,0,0,0,72,70,1,0,0,0,73,66,1,0,0,0,73,74,1,0,0,
-        0,74,75,1,0,0,0,75,76,5,6,0,0,76,13,1,0,0,0,77,78,5,7,0,0,78,79,
-        3,16,8,0,79,83,5,8,0,0,80,82,3,2,1,0,81,80,1,0,0,0,82,85,1,0,0,0,
-        83,81,1,0,0,0,83,84,1,0,0,0,84,86,1,0,0,0,85,83,1,0,0,0,86,87,5,
-        6,0,0,87,15,1,0,0,0,88,89,6,8,-1,0,89,90,5,24,0,0,90,99,3,16,8,6,
-        91,92,5,14,0,0,92,93,3,16,8,0,93,94,5,15,0,0,94,99,1,0,0,0,95,99,
-        5,12,0,0,96,99,5,13,0,0,97,99,5,11,0,0,98,88,1,0,0,0,98,91,1,0,0,
-        0,98,95,1,0,0,0,98,96,1,0,0,0,98,97,1,0,0,0,99,129,1,0,0,0,100,101,
-        10,14,0,0,101,102,5,20,0,0,102,128,3,16,8,15,103,104,10,13,0,0,104,
-        105,5,21,0,0,105,128,3,16,8,14,106,107,10,12,0,0,107,108,5,18,0,
-        0,108,128,3,16,8,13,109,110,10,11,0,0,110,111,5,19,0,0,111,128,3,
-        16,8,12,112,113,10,10,0,0,113,114,5,22,0,0,114,128,3,16,8,11,115,
-        116,10,9,0,0,116,117,5,23,0,0,117,128,3,16,8,10,118,119,10,8,0,0,
-        119,120,5,26,0,0,120,128,3,16,8,9,121,122,10,7,0,0,122,123,5,27,
-        0,0,123,128,3,16,8,8,124,125,10,5,0,0,125,126,5,25,0,0,126,128,3,
-        16,8,6,127,100,1,0,0,0,127,103,1,0,0,0,127,106,1,0,0,0,127,109,1,
-        0,0,0,127,112,1,0,0,0,127,115,1,0,0,0,127,118,1,0,0,0,127,121,1,
-        0,0,0,127,124,1,0,0,0,128,131,1,0,0,0,129,127,1,0,0,0,129,130,1,
-        0,0,0,130,17,1,0,0,0,131,129,1,0,0,0,132,133,7,0,0,0,133,19,1,0,
-        0,0,9,23,34,63,70,73,83,98,127,129
+        4,1,30,154,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,
+        6,2,7,7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,
+        2,14,7,14,2,15,7,15,2,16,7,16,1,0,1,0,1,0,1,1,5,1,39,8,1,10,1,12,
+        1,42,9,1,1,2,1,2,1,2,1,2,1,2,3,2,49,8,2,1,3,1,3,1,3,1,3,1,3,1,3,
+        1,4,1,4,1,4,1,4,1,4,1,4,1,5,1,5,1,5,1,5,1,5,1,6,1,6,1,6,1,6,1,6,
+        1,6,3,6,74,8,6,1,6,1,6,1,7,1,7,1,7,1,7,1,7,1,7,1,8,1,8,1,9,1,9,1,
+        9,1,9,1,9,1,9,5,9,92,8,9,10,9,12,9,95,9,9,1,10,1,10,1,10,1,10,1,
+        10,1,10,5,10,103,8,10,10,10,12,10,106,9,10,1,11,1,11,1,11,5,11,111,
+        8,11,10,11,12,11,114,9,11,1,12,1,12,1,13,1,13,1,13,1,13,1,13,1,13,
+        5,13,124,8,13,10,13,12,13,127,9,13,1,14,1,14,1,14,1,14,1,14,1,14,
+        5,14,135,8,14,10,14,12,14,138,9,14,1,15,1,15,1,15,1,15,1,15,1,15,
+        1,15,1,15,1,15,1,15,3,15,150,8,15,1,16,1,16,1,16,0,4,18,20,26,28,
+        17,0,2,4,6,8,10,12,14,16,18,20,22,24,26,28,30,32,0,4,1,0,23,28,1,
+        0,16,17,1,0,18,19,1,0,9,10,151,0,34,1,0,0,0,2,40,1,0,0,0,4,48,1,
+        0,0,0,6,50,1,0,0,0,8,56,1,0,0,0,10,62,1,0,0,0,12,67,1,0,0,0,14,77,
+        1,0,0,0,16,83,1,0,0,0,18,85,1,0,0,0,20,96,1,0,0,0,22,107,1,0,0,0,
+        24,115,1,0,0,0,26,117,1,0,0,0,28,128,1,0,0,0,30,149,1,0,0,0,32,151,
+        1,0,0,0,34,35,3,2,1,0,35,36,5,0,0,1,36,1,1,0,0,0,37,39,3,4,2,0,38,
+        37,1,0,0,0,39,42,1,0,0,0,40,38,1,0,0,0,40,41,1,0,0,0,41,3,1,0,0,
+        0,42,40,1,0,0,0,43,49,3,6,3,0,44,49,3,8,4,0,45,49,3,10,5,0,46,49,
+        3,12,6,0,47,49,3,14,7,0,48,43,1,0,0,0,48,44,1,0,0,0,48,45,1,0,0,
+        0,48,46,1,0,0,0,48,47,1,0,0,0,49,5,1,0,0,0,50,51,5,1,0,0,51,52,5,
+        12,0,0,52,53,5,11,0,0,53,54,5,13,0,0,54,55,5,14,0,0,55,7,1,0,0,0,
+        56,57,5,2,0,0,57,58,5,12,0,0,58,59,3,16,8,0,59,60,5,13,0,0,60,61,
+        5,14,0,0,61,9,1,0,0,0,62,63,5,11,0,0,63,64,5,15,0,0,64,65,3,16,8,
+        0,65,66,5,14,0,0,66,11,1,0,0,0,67,68,5,3,0,0,68,69,3,16,8,0,69,70,
+        5,5,0,0,70,73,3,2,1,0,71,72,5,4,0,0,72,74,3,2,1,0,73,71,1,0,0,0,
+        73,74,1,0,0,0,74,75,1,0,0,0,75,76,5,6,0,0,76,13,1,0,0,0,77,78,5,
+        7,0,0,78,79,3,16,8,0,79,80,5,8,0,0,80,81,3,2,1,0,81,82,5,6,0,0,82,
+        15,1,0,0,0,83,84,3,18,9,0,84,17,1,0,0,0,85,86,6,9,-1,0,86,87,3,20,
+        10,0,87,93,1,0,0,0,88,89,10,2,0,0,89,90,5,21,0,0,90,92,3,20,10,0,
+        91,88,1,0,0,0,92,95,1,0,0,0,93,91,1,0,0,0,93,94,1,0,0,0,94,19,1,
+        0,0,0,95,93,1,0,0,0,96,97,6,10,-1,0,97,98,3,22,11,0,98,104,1,0,0,
+        0,99,100,10,2,0,0,100,101,5,20,0,0,101,103,3,22,11,0,102,99,1,0,
+        0,0,103,106,1,0,0,0,104,102,1,0,0,0,104,105,1,0,0,0,105,21,1,0,0,
+        0,106,104,1,0,0,0,107,112,3,24,12,0,108,109,7,0,0,0,109,111,3,24,
+        12,0,110,108,1,0,0,0,111,114,1,0,0,0,112,110,1,0,0,0,112,113,1,0,
+        0,0,113,23,1,0,0,0,114,112,1,0,0,0,115,116,3,26,13,0,116,25,1,0,
+        0,0,117,118,6,13,-1,0,118,119,3,28,14,0,119,125,1,0,0,0,120,121,
+        10,2,0,0,121,122,7,1,0,0,122,124,3,28,14,0,123,120,1,0,0,0,124,127,
+        1,0,0,0,125,123,1,0,0,0,125,126,1,0,0,0,126,27,1,0,0,0,127,125,1,
+        0,0,0,128,129,6,14,-1,0,129,130,3,30,15,0,130,136,1,0,0,0,131,132,
+        10,2,0,0,132,133,7,2,0,0,133,135,3,30,15,0,134,131,1,0,0,0,135,138,
+        1,0,0,0,136,134,1,0,0,0,136,137,1,0,0,0,137,29,1,0,0,0,138,136,1,
+        0,0,0,139,140,5,12,0,0,140,141,3,16,8,0,141,142,5,13,0,0,142,150,
+        1,0,0,0,143,144,5,17,0,0,144,150,3,30,15,0,145,146,5,22,0,0,146,
+        150,3,30,15,0,147,150,3,32,16,0,148,150,5,11,0,0,149,139,1,0,0,0,
+        149,143,1,0,0,0,149,145,1,0,0,0,149,147,1,0,0,0,149,148,1,0,0,0,
+        150,31,1,0,0,0,151,152,7,3,0,0,152,33,1,0,0,0,9,40,48,73,93,104,
+        112,125,136,149
     ]
 
 class CompiladorParser ( Parser ):
@@ -68,30 +73,40 @@ class CompiladorParser ( Parser ):
     sharedContextCache = PredictionContextCache()
 
     literalNames = [ "<INVALID>", "'leia'", "'escreva'", "'se'", "'senao'", 
-                     "'entao'", "'fim'", "'enquanto'", "'faca'", "'int'", 
-                     "'string'", "<INVALID>", "<INVALID>", "<INVALID>", 
-                     "'('", "')'", "';'", "'='", "'+'", "'-'", "'*'", "'/'", 
-                     "'&&'", "'||'", "'!'", "'=='", "'>'", "'<'" ]
+                     "'entao'", "'fim'", "'enquanto'", "'faca'", "<INVALID>", 
+                     "<INVALID>", "<INVALID>", "'('", "')'", "';'", "'='", 
+                     "'+'", "'-'", "'*'", "'/'", "'&&'", "'||'", "'!'", 
+                     "'=='", "'~='", "'>'", "'<'", "'>='", "'<='" ]
 
     symbolicNames = [ "<INVALID>", "LEIA", "ESCREVA", "SE", "SENAO", "ENTAO", 
-                      "FIM", "ENQUANTO", "FACA", "INT_TIPO", "STRING_TIPO", 
-                      "ID", "INT", "STRING", "LPAREN", "RPAREN", "SEMI", 
-                      "ASSIGN", "PLUS", "MINUS", "MULT", "DIV", "AND", "OR", 
-                      "NOT", "EQ", "GT", "LT", "WS" ]
+                      "FIM", "ENQUANTO", "FACA", "INT", "STRING", "IDENT", 
+                      "ABREPAR", "FECHAPAR", "PONTOVIRGULA", "ATRIBUICAO", 
+                      "SOMA", "SUB", "MULT", "DIV", "E", "OU", "NAO", "IGUAL", 
+                      "DIFERENTE", "MAIOR", "MENOR", "MAIORIGUAL", "MENORIGUAL", 
+                      "WS", "COMENTARIO" ]
 
     RULE_programa = 0
-    RULE_comando = 1
-    RULE_declaracao = 2
-    RULE_atribuicao = 3
-    RULE_entrada = 4
-    RULE_saida = 5
+    RULE_bloco = 1
+    RULE_comando = 2
+    RULE_leitura = 3
+    RULE_escrita = 4
+    RULE_atribuicao = 5
     RULE_condicional = 6
     RULE_repeticao = 7
-    RULE_expressao = 8
-    RULE_tipo = 9
+    RULE_expr = 8
+    RULE_exprLogico = 9
+    RULE_exprAnd = 10
+    RULE_exprIgualdade = 11
+    RULE_exprComparacao = 12
+    RULE_exprAritmetica = 13
+    RULE_termo = 14
+    RULE_fator = 15
+    RULE_literal = 16
 
-    ruleNames =  [ "programa", "comando", "declaracao", "atribuicao", "entrada", 
-                   "saida", "condicional", "repeticao", "expressao", "tipo" ]
+    ruleNames =  [ "programa", "bloco", "comando", "leitura", "escrita", 
+                   "atribuicao", "condicional", "repeticao", "expr", "exprLogico", 
+                   "exprAnd", "exprIgualdade", "exprComparacao", "exprAritmetica", 
+                   "termo", "fator", "literal" ]
 
     EOF = Token.EOF
     LEIA=1
@@ -102,26 +117,28 @@ class CompiladorParser ( Parser ):
     FIM=6
     ENQUANTO=7
     FACA=8
-    INT_TIPO=9
-    STRING_TIPO=10
-    ID=11
-    INT=12
-    STRING=13
-    LPAREN=14
-    RPAREN=15
-    SEMI=16
-    ASSIGN=17
-    PLUS=18
-    MINUS=19
-    MULT=20
-    DIV=21
-    AND=22
-    OR=23
-    NOT=24
-    EQ=25
-    GT=26
-    LT=27
-    WS=28
+    INT=9
+    STRING=10
+    IDENT=11
+    ABREPAR=12
+    FECHAPAR=13
+    PONTOVIRGULA=14
+    ATRIBUICAO=15
+    SOMA=16
+    SUB=17
+    MULT=18
+    DIV=19
+    E=20
+    OU=21
+    NAO=22
+    IGUAL=23
+    DIFERENTE=24
+    MAIOR=25
+    MENOR=26
+    MAIORIGUAL=27
+    MENORIGUAL=28
+    WS=29
+    COMENTARIO=30
 
     def __init__(self, input:TokenStream, output:TextIO = sys.stdout):
         super().__init__(input, output)
@@ -139,15 +156,12 @@ class CompiladorParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
+        def bloco(self):
+            return self.getTypedRuleContext(CompiladorParser.BlocoContext,0)
+
+
         def EOF(self):
             return self.getToken(CompiladorParser.EOF, 0)
-
-        def comando(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(CompiladorParser.ComandoContext)
-            else:
-                return self.getTypedRuleContext(CompiladorParser.ComandoContext,i)
-
 
         def getRuleIndex(self):
             return CompiladorParser.RULE_programa
@@ -167,21 +181,66 @@ class CompiladorParser ( Parser ):
 
         localctx = CompiladorParser.ProgramaContext(self, self._ctx, self.state)
         self.enterRule(localctx, 0, self.RULE_programa)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 34
+            self.bloco()
+            self.state = 35
+            self.match(CompiladorParser.EOF)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class BlocoContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def comando(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(CompiladorParser.ComandoContext)
+            else:
+                return self.getTypedRuleContext(CompiladorParser.ComandoContext,i)
+
+
+        def getRuleIndex(self):
+            return CompiladorParser.RULE_bloco
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterBloco" ):
+                listener.enterBloco(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitBloco" ):
+                listener.exitBloco(self)
+
+
+
+
+    def bloco(self):
+
+        localctx = CompiladorParser.BlocoContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 2, self.RULE_bloco)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 23
+            self.state = 40
             self._errHandler.sync(self)
             _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 3726) != 0):
-                self.state = 20
+            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 2190) != 0):
+                self.state = 37
                 self.comando()
-                self.state = 25
+                self.state = 42
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
 
-            self.state = 26
-            self.match(CompiladorParser.EOF)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -198,20 +257,16 @@ class CompiladorParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def declaracao(self):
-            return self.getTypedRuleContext(CompiladorParser.DeclaracaoContext,0)
+        def leitura(self):
+            return self.getTypedRuleContext(CompiladorParser.LeituraContext,0)
+
+
+        def escrita(self):
+            return self.getTypedRuleContext(CompiladorParser.EscritaContext,0)
 
 
         def atribuicao(self):
             return self.getTypedRuleContext(CompiladorParser.AtribuicaoContext,0)
-
-
-        def entrada(self):
-            return self.getTypedRuleContext(CompiladorParser.EntradaContext,0)
-
-
-        def saida(self):
-            return self.getTypedRuleContext(CompiladorParser.SaidaContext,0)
 
 
         def condicional(self):
@@ -239,39 +294,34 @@ class CompiladorParser ( Parser ):
     def comando(self):
 
         localctx = CompiladorParser.ComandoContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 2, self.RULE_comando)
+        self.enterRule(localctx, 4, self.RULE_comando)
         try:
-            self.state = 34
+            self.state = 48
             self._errHandler.sync(self)
             token = self._input.LA(1)
-            if token in [9, 10]:
+            if token in [1]:
                 self.enterOuterAlt(localctx, 1)
-                self.state = 28
-                self.declaracao()
-                pass
-            elif token in [11]:
-                self.enterOuterAlt(localctx, 2)
-                self.state = 29
-                self.atribuicao()
-                pass
-            elif token in [1]:
-                self.enterOuterAlt(localctx, 3)
-                self.state = 30
-                self.entrada()
+                self.state = 43
+                self.leitura()
                 pass
             elif token in [2]:
-                self.enterOuterAlt(localctx, 4)
-                self.state = 31
-                self.saida()
+                self.enterOuterAlt(localctx, 2)
+                self.state = 44
+                self.escrita()
+                pass
+            elif token in [11]:
+                self.enterOuterAlt(localctx, 3)
+                self.state = 45
+                self.atribuicao()
                 pass
             elif token in [3]:
-                self.enterOuterAlt(localctx, 5)
-                self.state = 32
+                self.enterOuterAlt(localctx, 4)
+                self.state = 46
                 self.condicional()
                 pass
             elif token in [7]:
-                self.enterOuterAlt(localctx, 6)
-                self.state = 33
+                self.enterOuterAlt(localctx, 5)
+                self.state = 47
                 self.repeticao()
                 pass
             else:
@@ -286,49 +336,120 @@ class CompiladorParser ( Parser ):
         return localctx
 
 
-    class DeclaracaoContext(ParserRuleContext):
+    class LeituraContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def tipo(self):
-            return self.getTypedRuleContext(CompiladorParser.TipoContext,0)
+        def LEIA(self):
+            return self.getToken(CompiladorParser.LEIA, 0)
 
+        def ABREPAR(self):
+            return self.getToken(CompiladorParser.ABREPAR, 0)
 
-        def ID(self):
-            return self.getToken(CompiladorParser.ID, 0)
+        def IDENT(self):
+            return self.getToken(CompiladorParser.IDENT, 0)
 
-        def SEMI(self):
-            return self.getToken(CompiladorParser.SEMI, 0)
+        def FECHAPAR(self):
+            return self.getToken(CompiladorParser.FECHAPAR, 0)
+
+        def PONTOVIRGULA(self):
+            return self.getToken(CompiladorParser.PONTOVIRGULA, 0)
 
         def getRuleIndex(self):
-            return CompiladorParser.RULE_declaracao
+            return CompiladorParser.RULE_leitura
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterDeclaracao" ):
-                listener.enterDeclaracao(self)
+            if hasattr( listener, "enterLeitura" ):
+                listener.enterLeitura(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitDeclaracao" ):
-                listener.exitDeclaracao(self)
+            if hasattr( listener, "exitLeitura" ):
+                listener.exitLeitura(self)
 
 
 
 
-    def declaracao(self):
+    def leitura(self):
 
-        localctx = CompiladorParser.DeclaracaoContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 4, self.RULE_declaracao)
+        localctx = CompiladorParser.LeituraContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 6, self.RULE_leitura)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 36
-            self.tipo()
-            self.state = 37
-            self.match(CompiladorParser.ID)
-            self.state = 38
-            self.match(CompiladorParser.SEMI)
+            self.state = 50
+            self.match(CompiladorParser.LEIA)
+            self.state = 51
+            self.match(CompiladorParser.ABREPAR)
+            self.state = 52
+            self.match(CompiladorParser.IDENT)
+            self.state = 53
+            self.match(CompiladorParser.FECHAPAR)
+            self.state = 54
+            self.match(CompiladorParser.PONTOVIRGULA)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class EscritaContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def ESCREVA(self):
+            return self.getToken(CompiladorParser.ESCREVA, 0)
+
+        def ABREPAR(self):
+            return self.getToken(CompiladorParser.ABREPAR, 0)
+
+        def expr(self):
+            return self.getTypedRuleContext(CompiladorParser.ExprContext,0)
+
+
+        def FECHAPAR(self):
+            return self.getToken(CompiladorParser.FECHAPAR, 0)
+
+        def PONTOVIRGULA(self):
+            return self.getToken(CompiladorParser.PONTOVIRGULA, 0)
+
+        def getRuleIndex(self):
+            return CompiladorParser.RULE_escrita
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterEscrita" ):
+                listener.enterEscrita(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitEscrita" ):
+                listener.exitEscrita(self)
+
+
+
+
+    def escrita(self):
+
+        localctx = CompiladorParser.EscritaContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 8, self.RULE_escrita)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 56
+            self.match(CompiladorParser.ESCREVA)
+            self.state = 57
+            self.match(CompiladorParser.ABREPAR)
+            self.state = 58
+            self.expr()
+            self.state = 59
+            self.match(CompiladorParser.FECHAPAR)
+            self.state = 60
+            self.match(CompiladorParser.PONTOVIRGULA)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -345,18 +466,18 @@ class CompiladorParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def ID(self):
-            return self.getToken(CompiladorParser.ID, 0)
+        def IDENT(self):
+            return self.getToken(CompiladorParser.IDENT, 0)
 
-        def ASSIGN(self):
-            return self.getToken(CompiladorParser.ASSIGN, 0)
+        def ATRIBUICAO(self):
+            return self.getToken(CompiladorParser.ATRIBUICAO, 0)
 
-        def expressao(self):
-            return self.getTypedRuleContext(CompiladorParser.ExpressaoContext,0)
+        def expr(self):
+            return self.getTypedRuleContext(CompiladorParser.ExprContext,0)
 
 
-        def SEMI(self):
-            return self.getToken(CompiladorParser.SEMI, 0)
+        def PONTOVIRGULA(self):
+            return self.getToken(CompiladorParser.PONTOVIRGULA, 0)
 
         def getRuleIndex(self):
             return CompiladorParser.RULE_atribuicao
@@ -375,140 +496,17 @@ class CompiladorParser ( Parser ):
     def atribuicao(self):
 
         localctx = CompiladorParser.AtribuicaoContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 6, self.RULE_atribuicao)
+        self.enterRule(localctx, 10, self.RULE_atribuicao)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 40
-            self.match(CompiladorParser.ID)
-            self.state = 41
-            self.match(CompiladorParser.ASSIGN)
-            self.state = 42
-            self.expressao(0)
-            self.state = 43
-            self.match(CompiladorParser.SEMI)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class EntradaContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def LEIA(self):
-            return self.getToken(CompiladorParser.LEIA, 0)
-
-        def LPAREN(self):
-            return self.getToken(CompiladorParser.LPAREN, 0)
-
-        def ID(self):
-            return self.getToken(CompiladorParser.ID, 0)
-
-        def RPAREN(self):
-            return self.getToken(CompiladorParser.RPAREN, 0)
-
-        def SEMI(self):
-            return self.getToken(CompiladorParser.SEMI, 0)
-
-        def getRuleIndex(self):
-            return CompiladorParser.RULE_entrada
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterEntrada" ):
-                listener.enterEntrada(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitEntrada" ):
-                listener.exitEntrada(self)
-
-
-
-
-    def entrada(self):
-
-        localctx = CompiladorParser.EntradaContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 8, self.RULE_entrada)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 45
-            self.match(CompiladorParser.LEIA)
-            self.state = 46
-            self.match(CompiladorParser.LPAREN)
-            self.state = 47
-            self.match(CompiladorParser.ID)
-            self.state = 48
-            self.match(CompiladorParser.RPAREN)
-            self.state = 49
-            self.match(CompiladorParser.SEMI)
-        except RecognitionException as re:
-            localctx.exception = re
-            self._errHandler.reportError(self, re)
-            self._errHandler.recover(self, re)
-        finally:
-            self.exitRule()
-        return localctx
-
-
-    class SaidaContext(ParserRuleContext):
-        __slots__ = 'parser'
-
-        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
-            super().__init__(parent, invokingState)
-            self.parser = parser
-
-        def ESCREVA(self):
-            return self.getToken(CompiladorParser.ESCREVA, 0)
-
-        def LPAREN(self):
-            return self.getToken(CompiladorParser.LPAREN, 0)
-
-        def expressao(self):
-            return self.getTypedRuleContext(CompiladorParser.ExpressaoContext,0)
-
-
-        def RPAREN(self):
-            return self.getToken(CompiladorParser.RPAREN, 0)
-
-        def SEMI(self):
-            return self.getToken(CompiladorParser.SEMI, 0)
-
-        def getRuleIndex(self):
-            return CompiladorParser.RULE_saida
-
-        def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterSaida" ):
-                listener.enterSaida(self)
-
-        def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitSaida" ):
-                listener.exitSaida(self)
-
-
-
-
-    def saida(self):
-
-        localctx = CompiladorParser.SaidaContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 10, self.RULE_saida)
-        try:
-            self.enterOuterAlt(localctx, 1)
-            self.state = 51
-            self.match(CompiladorParser.ESCREVA)
-            self.state = 52
-            self.match(CompiladorParser.LPAREN)
-            self.state = 53
-            self.expressao(0)
-            self.state = 54
-            self.match(CompiladorParser.RPAREN)
-            self.state = 55
-            self.match(CompiladorParser.SEMI)
+            self.state = 62
+            self.match(CompiladorParser.IDENT)
+            self.state = 63
+            self.match(CompiladorParser.ATRIBUICAO)
+            self.state = 64
+            self.expr()
+            self.state = 65
+            self.match(CompiladorParser.PONTOVIRGULA)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -528,22 +526,22 @@ class CompiladorParser ( Parser ):
         def SE(self):
             return self.getToken(CompiladorParser.SE, 0)
 
-        def expressao(self):
-            return self.getTypedRuleContext(CompiladorParser.ExpressaoContext,0)
+        def expr(self):
+            return self.getTypedRuleContext(CompiladorParser.ExprContext,0)
 
 
         def ENTAO(self):
             return self.getToken(CompiladorParser.ENTAO, 0)
 
+        def bloco(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(CompiladorParser.BlocoContext)
+            else:
+                return self.getTypedRuleContext(CompiladorParser.BlocoContext,i)
+
+
         def FIM(self):
             return self.getToken(CompiladorParser.FIM, 0)
-
-        def comando(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(CompiladorParser.ComandoContext)
-            else:
-                return self.getTypedRuleContext(CompiladorParser.ComandoContext,i)
-
 
         def SENAO(self):
             return self.getToken(CompiladorParser.SENAO, 0)
@@ -569,38 +567,22 @@ class CompiladorParser ( Parser ):
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 57
+            self.state = 67
             self.match(CompiladorParser.SE)
-            self.state = 58
-            self.expressao(0)
-            self.state = 59
+            self.state = 68
+            self.expr()
+            self.state = 69
             self.match(CompiladorParser.ENTAO)
-            self.state = 63
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 3726) != 0):
-                self.state = 60
-                self.comando()
-                self.state = 65
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-
+            self.state = 70
+            self.bloco()
             self.state = 73
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             if _la==4:
-                self.state = 66
+                self.state = 71
                 self.match(CompiladorParser.SENAO)
-                self.state = 70
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-                while (((_la) & ~0x3f) == 0 and ((1 << _la) & 3726) != 0):
-                    self.state = 67
-                    self.comando()
-                    self.state = 72
-                    self._errHandler.sync(self)
-                    _la = self._input.LA(1)
-
+                self.state = 72
+                self.bloco()
 
 
             self.state = 75
@@ -624,22 +606,19 @@ class CompiladorParser ( Parser ):
         def ENQUANTO(self):
             return self.getToken(CompiladorParser.ENQUANTO, 0)
 
-        def expressao(self):
-            return self.getTypedRuleContext(CompiladorParser.ExpressaoContext,0)
+        def expr(self):
+            return self.getTypedRuleContext(CompiladorParser.ExprContext,0)
 
 
         def FACA(self):
             return self.getToken(CompiladorParser.FACA, 0)
 
+        def bloco(self):
+            return self.getTypedRuleContext(CompiladorParser.BlocoContext,0)
+
+
         def FIM(self):
             return self.getToken(CompiladorParser.FIM, 0)
-
-        def comando(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(CompiladorParser.ComandoContext)
-            else:
-                return self.getTypedRuleContext(CompiladorParser.ComandoContext,i)
-
 
         def getRuleIndex(self):
             return CompiladorParser.RULE_repeticao
@@ -659,26 +638,17 @@ class CompiladorParser ( Parser ):
 
         localctx = CompiladorParser.RepeticaoContext(self, self._ctx, self.state)
         self.enterRule(localctx, 14, self.RULE_repeticao)
-        self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 77
             self.match(CompiladorParser.ENQUANTO)
             self.state = 78
-            self.expressao(0)
+            self.expr()
             self.state = 79
             self.match(CompiladorParser.FACA)
-            self.state = 83
-            self._errHandler.sync(self)
-            _la = self._input.LA(1)
-            while (((_la) & ~0x3f) == 0 and ((1 << _la) & 3726) != 0):
-                self.state = 80
-                self.comando()
-                self.state = 85
-                self._errHandler.sync(self)
-                _la = self._input.LA(1)
-
-            self.state = 86
+            self.state = 80
+            self.bloco()
+            self.state = 81
             self.match(CompiladorParser.FIM)
         except RecognitionException as re:
             localctx.exception = re
@@ -689,252 +659,112 @@ class CompiladorParser ( Parser ):
         return localctx
 
 
-    class ExpressaoContext(ParserRuleContext):
+    class ExprContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def NOT(self):
-            return self.getToken(CompiladorParser.NOT, 0)
+        def exprLogico(self):
+            return self.getTypedRuleContext(CompiladorParser.ExprLogicoContext,0)
 
-        def expressao(self, i:int=None):
-            if i is None:
-                return self.getTypedRuleContexts(CompiladorParser.ExpressaoContext)
-            else:
-                return self.getTypedRuleContext(CompiladorParser.ExpressaoContext,i)
-
-
-        def LPAREN(self):
-            return self.getToken(CompiladorParser.LPAREN, 0)
-
-        def RPAREN(self):
-            return self.getToken(CompiladorParser.RPAREN, 0)
-
-        def INT(self):
-            return self.getToken(CompiladorParser.INT, 0)
-
-        def STRING(self):
-            return self.getToken(CompiladorParser.STRING, 0)
-
-        def ID(self):
-            return self.getToken(CompiladorParser.ID, 0)
-
-        def MULT(self):
-            return self.getToken(CompiladorParser.MULT, 0)
-
-        def DIV(self):
-            return self.getToken(CompiladorParser.DIV, 0)
-
-        def PLUS(self):
-            return self.getToken(CompiladorParser.PLUS, 0)
-
-        def MINUS(self):
-            return self.getToken(CompiladorParser.MINUS, 0)
-
-        def AND(self):
-            return self.getToken(CompiladorParser.AND, 0)
-
-        def OR(self):
-            return self.getToken(CompiladorParser.OR, 0)
-
-        def GT(self):
-            return self.getToken(CompiladorParser.GT, 0)
-
-        def LT(self):
-            return self.getToken(CompiladorParser.LT, 0)
-
-        def EQ(self):
-            return self.getToken(CompiladorParser.EQ, 0)
 
         def getRuleIndex(self):
-            return CompiladorParser.RULE_expressao
+            return CompiladorParser.RULE_expr
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterExpressao" ):
-                listener.enterExpressao(self)
+            if hasattr( listener, "enterExpr" ):
+                listener.enterExpr(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitExpressao" ):
-                listener.exitExpressao(self)
+            if hasattr( listener, "exitExpr" ):
+                listener.exitExpr(self)
 
 
 
-    def expressao(self, _p:int=0):
-        _parentctx = self._ctx
-        _parentState = self.state
-        localctx = CompiladorParser.ExpressaoContext(self, self._ctx, _parentState)
-        _prevctx = localctx
-        _startState = 16
-        self.enterRecursionRule(localctx, 16, self.RULE_expressao, _p)
+
+    def expr(self):
+
+        localctx = CompiladorParser.ExprContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 16, self.RULE_expr)
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 98
-            self._errHandler.sync(self)
-            token = self._input.LA(1)
-            if token in [24]:
-                self.state = 89
-                self.match(CompiladorParser.NOT)
-                self.state = 90
-                self.expressao(6)
-                pass
-            elif token in [14]:
-                self.state = 91
-                self.match(CompiladorParser.LPAREN)
-                self.state = 92
-                self.expressao(0)
-                self.state = 93
-                self.match(CompiladorParser.RPAREN)
-                pass
-            elif token in [12]:
-                self.state = 95
-                self.match(CompiladorParser.INT)
-                pass
-            elif token in [13]:
-                self.state = 96
-                self.match(CompiladorParser.STRING)
-                pass
-            elif token in [11]:
-                self.state = 97
-                self.match(CompiladorParser.ID)
-                pass
-            else:
-                raise NoViableAltException(self)
+            self.state = 83
+            self.exprLogico(0)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
 
+
+    class ExprLogicoContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def exprAnd(self):
+            return self.getTypedRuleContext(CompiladorParser.ExprAndContext,0)
+
+
+        def exprLogico(self):
+            return self.getTypedRuleContext(CompiladorParser.ExprLogicoContext,0)
+
+
+        def OU(self):
+            return self.getToken(CompiladorParser.OU, 0)
+
+        def getRuleIndex(self):
+            return CompiladorParser.RULE_exprLogico
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterExprLogico" ):
+                listener.enterExprLogico(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitExprLogico" ):
+                listener.exitExprLogico(self)
+
+
+
+    def exprLogico(self, _p:int=0):
+        _parentctx = self._ctx
+        _parentState = self.state
+        localctx = CompiladorParser.ExprLogicoContext(self, self._ctx, _parentState)
+        _prevctx = localctx
+        _startState = 18
+        self.enterRecursionRule(localctx, 18, self.RULE_exprLogico, _p)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 86
+            self.exprAnd(0)
             self._ctx.stop = self._input.LT(-1)
-            self.state = 129
+            self.state = 93
             self._errHandler.sync(self)
-            _alt = self._interp.adaptivePredict(self._input,8,self._ctx)
+            _alt = self._interp.adaptivePredict(self._input,3,self._ctx)
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     if self._parseListeners is not None:
                         self.triggerExitRuleEvent()
                     _prevctx = localctx
-                    self.state = 127
-                    self._errHandler.sync(self)
-                    la_ = self._interp.adaptivePredict(self._input,7,self._ctx)
-                    if la_ == 1:
-                        localctx = CompiladorParser.ExpressaoContext(self, _parentctx, _parentState)
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expressao)
-                        self.state = 100
-                        if not self.precpred(self._ctx, 14):
-                            from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 14)")
-                        self.state = 101
-                        self.match(CompiladorParser.MULT)
-                        self.state = 102
-                        self.expressao(15)
-                        pass
-
-                    elif la_ == 2:
-                        localctx = CompiladorParser.ExpressaoContext(self, _parentctx, _parentState)
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expressao)
-                        self.state = 103
-                        if not self.precpred(self._ctx, 13):
-                            from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 13)")
-                        self.state = 104
-                        self.match(CompiladorParser.DIV)
-                        self.state = 105
-                        self.expressao(14)
-                        pass
-
-                    elif la_ == 3:
-                        localctx = CompiladorParser.ExpressaoContext(self, _parentctx, _parentState)
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expressao)
-                        self.state = 106
-                        if not self.precpred(self._ctx, 12):
-                            from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 12)")
-                        self.state = 107
-                        self.match(CompiladorParser.PLUS)
-                        self.state = 108
-                        self.expressao(13)
-                        pass
-
-                    elif la_ == 4:
-                        localctx = CompiladorParser.ExpressaoContext(self, _parentctx, _parentState)
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expressao)
-                        self.state = 109
-                        if not self.precpred(self._ctx, 11):
-                            from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 11)")
-                        self.state = 110
-                        self.match(CompiladorParser.MINUS)
-                        self.state = 111
-                        self.expressao(12)
-                        pass
-
-                    elif la_ == 5:
-                        localctx = CompiladorParser.ExpressaoContext(self, _parentctx, _parentState)
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expressao)
-                        self.state = 112
-                        if not self.precpred(self._ctx, 10):
-                            from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 10)")
-                        self.state = 113
-                        self.match(CompiladorParser.AND)
-                        self.state = 114
-                        self.expressao(11)
-                        pass
-
-                    elif la_ == 6:
-                        localctx = CompiladorParser.ExpressaoContext(self, _parentctx, _parentState)
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expressao)
-                        self.state = 115
-                        if not self.precpred(self._ctx, 9):
-                            from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 9)")
-                        self.state = 116
-                        self.match(CompiladorParser.OR)
-                        self.state = 117
-                        self.expressao(10)
-                        pass
-
-                    elif la_ == 7:
-                        localctx = CompiladorParser.ExpressaoContext(self, _parentctx, _parentState)
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expressao)
-                        self.state = 118
-                        if not self.precpred(self._ctx, 8):
-                            from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 8)")
-                        self.state = 119
-                        self.match(CompiladorParser.GT)
-                        self.state = 120
-                        self.expressao(9)
-                        pass
-
-                    elif la_ == 8:
-                        localctx = CompiladorParser.ExpressaoContext(self, _parentctx, _parentState)
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expressao)
-                        self.state = 121
-                        if not self.precpred(self._ctx, 7):
-                            from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 7)")
-                        self.state = 122
-                        self.match(CompiladorParser.LT)
-                        self.state = 123
-                        self.expressao(8)
-                        pass
-
-                    elif la_ == 9:
-                        localctx = CompiladorParser.ExpressaoContext(self, _parentctx, _parentState)
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_expressao)
-                        self.state = 124
-                        if not self.precpred(self._ctx, 5):
-                            from antlr4.error.Errors import FailedPredicateException
-                            raise FailedPredicateException(self, "self.precpred(self._ctx, 5)")
-                        self.state = 125
-                        self.match(CompiladorParser.EQ)
-                        self.state = 126
-                        self.expressao(6)
-                        pass
-
-             
-                self.state = 131
+                    localctx = CompiladorParser.ExprLogicoContext(self, _parentctx, _parentState)
+                    self.pushNewRecursionContext(localctx, _startState, self.RULE_exprLogico)
+                    self.state = 88
+                    if not self.precpred(self._ctx, 2):
+                        from antlr4.error.Errors import FailedPredicateException
+                        raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
+                    self.state = 89
+                    self.match(CompiladorParser.OU)
+                    self.state = 90
+                    self.exprAnd(0) 
+                self.state = 95
                 self._errHandler.sync(self)
-                _alt = self._interp.adaptivePredict(self._input,8,self._ctx)
+                _alt = self._interp.adaptivePredict(self._input,3,self._ctx)
 
         except RecognitionException as re:
             localctx.exception = re
@@ -945,41 +775,524 @@ class CompiladorParser ( Parser ):
         return localctx
 
 
-    class TipoContext(ParserRuleContext):
+    class ExprAndContext(ParserRuleContext):
         __slots__ = 'parser'
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def INT_TIPO(self):
-            return self.getToken(CompiladorParser.INT_TIPO, 0)
+        def exprIgualdade(self):
+            return self.getTypedRuleContext(CompiladorParser.ExprIgualdadeContext,0)
 
-        def STRING_TIPO(self):
-            return self.getToken(CompiladorParser.STRING_TIPO, 0)
+
+        def exprAnd(self):
+            return self.getTypedRuleContext(CompiladorParser.ExprAndContext,0)
+
+
+        def E(self):
+            return self.getToken(CompiladorParser.E, 0)
 
         def getRuleIndex(self):
-            return CompiladorParser.RULE_tipo
+            return CompiladorParser.RULE_exprAnd
 
         def enterRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "enterTipo" ):
-                listener.enterTipo(self)
+            if hasattr( listener, "enterExprAnd" ):
+                listener.enterExprAnd(self)
 
         def exitRule(self, listener:ParseTreeListener):
-            if hasattr( listener, "exitTipo" ):
-                listener.exitTipo(self)
+            if hasattr( listener, "exitExprAnd" ):
+                listener.exitExprAnd(self)
+
+
+
+    def exprAnd(self, _p:int=0):
+        _parentctx = self._ctx
+        _parentState = self.state
+        localctx = CompiladorParser.ExprAndContext(self, self._ctx, _parentState)
+        _prevctx = localctx
+        _startState = 20
+        self.enterRecursionRule(localctx, 20, self.RULE_exprAnd, _p)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 97
+            self.exprIgualdade()
+            self._ctx.stop = self._input.LT(-1)
+            self.state = 104
+            self._errHandler.sync(self)
+            _alt = self._interp.adaptivePredict(self._input,4,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    if self._parseListeners is not None:
+                        self.triggerExitRuleEvent()
+                    _prevctx = localctx
+                    localctx = CompiladorParser.ExprAndContext(self, _parentctx, _parentState)
+                    self.pushNewRecursionContext(localctx, _startState, self.RULE_exprAnd)
+                    self.state = 99
+                    if not self.precpred(self._ctx, 2):
+                        from antlr4.error.Errors import FailedPredicateException
+                        raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
+                    self.state = 100
+                    self.match(CompiladorParser.E)
+                    self.state = 101
+                    self.exprIgualdade() 
+                self.state = 106
+                self._errHandler.sync(self)
+                _alt = self._interp.adaptivePredict(self._input,4,self._ctx)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.unrollRecursionContexts(_parentctx)
+        return localctx
+
+
+    class ExprIgualdadeContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def exprComparacao(self, i:int=None):
+            if i is None:
+                return self.getTypedRuleContexts(CompiladorParser.ExprComparacaoContext)
+            else:
+                return self.getTypedRuleContext(CompiladorParser.ExprComparacaoContext,i)
+
+
+        def IGUAL(self, i:int=None):
+            if i is None:
+                return self.getTokens(CompiladorParser.IGUAL)
+            else:
+                return self.getToken(CompiladorParser.IGUAL, i)
+
+        def DIFERENTE(self, i:int=None):
+            if i is None:
+                return self.getTokens(CompiladorParser.DIFERENTE)
+            else:
+                return self.getToken(CompiladorParser.DIFERENTE, i)
+
+        def MENOR(self, i:int=None):
+            if i is None:
+                return self.getTokens(CompiladorParser.MENOR)
+            else:
+                return self.getToken(CompiladorParser.MENOR, i)
+
+        def MENORIGUAL(self, i:int=None):
+            if i is None:
+                return self.getTokens(CompiladorParser.MENORIGUAL)
+            else:
+                return self.getToken(CompiladorParser.MENORIGUAL, i)
+
+        def MAIOR(self, i:int=None):
+            if i is None:
+                return self.getTokens(CompiladorParser.MAIOR)
+            else:
+                return self.getToken(CompiladorParser.MAIOR, i)
+
+        def MAIORIGUAL(self, i:int=None):
+            if i is None:
+                return self.getTokens(CompiladorParser.MAIORIGUAL)
+            else:
+                return self.getToken(CompiladorParser.MAIORIGUAL, i)
+
+        def getRuleIndex(self):
+            return CompiladorParser.RULE_exprIgualdade
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterExprIgualdade" ):
+                listener.enterExprIgualdade(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitExprIgualdade" ):
+                listener.exitExprIgualdade(self)
 
 
 
 
-    def tipo(self):
+    def exprIgualdade(self):
 
-        localctx = CompiladorParser.TipoContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 18, self.RULE_tipo)
+        localctx = CompiladorParser.ExprIgualdadeContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 22, self.RULE_exprIgualdade)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
-            self.state = 132
+            self.state = 107
+            self.exprComparacao()
+            self.state = 112
+            self._errHandler.sync(self)
+            _alt = self._interp.adaptivePredict(self._input,5,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    self.state = 108
+                    _la = self._input.LA(1)
+                    if not((((_la) & ~0x3f) == 0 and ((1 << _la) & 528482304) != 0)):
+                        self._errHandler.recoverInline(self)
+                    else:
+                        self._errHandler.reportMatch(self)
+                        self.consume()
+                    self.state = 109
+                    self.exprComparacao() 
+                self.state = 114
+                self._errHandler.sync(self)
+                _alt = self._interp.adaptivePredict(self._input,5,self._ctx)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class ExprComparacaoContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def exprAritmetica(self):
+            return self.getTypedRuleContext(CompiladorParser.ExprAritmeticaContext,0)
+
+
+        def getRuleIndex(self):
+            return CompiladorParser.RULE_exprComparacao
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterExprComparacao" ):
+                listener.enterExprComparacao(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitExprComparacao" ):
+                listener.exitExprComparacao(self)
+
+
+
+
+    def exprComparacao(self):
+
+        localctx = CompiladorParser.ExprComparacaoContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 24, self.RULE_exprComparacao)
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 115
+            self.exprAritmetica(0)
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class ExprAritmeticaContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def termo(self):
+            return self.getTypedRuleContext(CompiladorParser.TermoContext,0)
+
+
+        def exprAritmetica(self):
+            return self.getTypedRuleContext(CompiladorParser.ExprAritmeticaContext,0)
+
+
+        def SOMA(self):
+            return self.getToken(CompiladorParser.SOMA, 0)
+
+        def SUB(self):
+            return self.getToken(CompiladorParser.SUB, 0)
+
+        def getRuleIndex(self):
+            return CompiladorParser.RULE_exprAritmetica
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterExprAritmetica" ):
+                listener.enterExprAritmetica(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitExprAritmetica" ):
+                listener.exitExprAritmetica(self)
+
+
+
+    def exprAritmetica(self, _p:int=0):
+        _parentctx = self._ctx
+        _parentState = self.state
+        localctx = CompiladorParser.ExprAritmeticaContext(self, self._ctx, _parentState)
+        _prevctx = localctx
+        _startState = 26
+        self.enterRecursionRule(localctx, 26, self.RULE_exprAritmetica, _p)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 118
+            self.termo(0)
+            self._ctx.stop = self._input.LT(-1)
+            self.state = 125
+            self._errHandler.sync(self)
+            _alt = self._interp.adaptivePredict(self._input,6,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    if self._parseListeners is not None:
+                        self.triggerExitRuleEvent()
+                    _prevctx = localctx
+                    localctx = CompiladorParser.ExprAritmeticaContext(self, _parentctx, _parentState)
+                    self.pushNewRecursionContext(localctx, _startState, self.RULE_exprAritmetica)
+                    self.state = 120
+                    if not self.precpred(self._ctx, 2):
+                        from antlr4.error.Errors import FailedPredicateException
+                        raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
+                    self.state = 121
+                    _la = self._input.LA(1)
+                    if not(_la==16 or _la==17):
+                        self._errHandler.recoverInline(self)
+                    else:
+                        self._errHandler.reportMatch(self)
+                        self.consume()
+                    self.state = 122
+                    self.termo(0) 
+                self.state = 127
+                self._errHandler.sync(self)
+                _alt = self._interp.adaptivePredict(self._input,6,self._ctx)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.unrollRecursionContexts(_parentctx)
+        return localctx
+
+
+    class TermoContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def fator(self):
+            return self.getTypedRuleContext(CompiladorParser.FatorContext,0)
+
+
+        def termo(self):
+            return self.getTypedRuleContext(CompiladorParser.TermoContext,0)
+
+
+        def MULT(self):
+            return self.getToken(CompiladorParser.MULT, 0)
+
+        def DIV(self):
+            return self.getToken(CompiladorParser.DIV, 0)
+
+        def getRuleIndex(self):
+            return CompiladorParser.RULE_termo
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTermo" ):
+                listener.enterTermo(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTermo" ):
+                listener.exitTermo(self)
+
+
+
+    def termo(self, _p:int=0):
+        _parentctx = self._ctx
+        _parentState = self.state
+        localctx = CompiladorParser.TermoContext(self, self._ctx, _parentState)
+        _prevctx = localctx
+        _startState = 28
+        self.enterRecursionRule(localctx, 28, self.RULE_termo, _p)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 129
+            self.fator()
+            self._ctx.stop = self._input.LT(-1)
+            self.state = 136
+            self._errHandler.sync(self)
+            _alt = self._interp.adaptivePredict(self._input,7,self._ctx)
+            while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
+                if _alt==1:
+                    if self._parseListeners is not None:
+                        self.triggerExitRuleEvent()
+                    _prevctx = localctx
+                    localctx = CompiladorParser.TermoContext(self, _parentctx, _parentState)
+                    self.pushNewRecursionContext(localctx, _startState, self.RULE_termo)
+                    self.state = 131
+                    if not self.precpred(self._ctx, 2):
+                        from antlr4.error.Errors import FailedPredicateException
+                        raise FailedPredicateException(self, "self.precpred(self._ctx, 2)")
+                    self.state = 132
+                    _la = self._input.LA(1)
+                    if not(_la==18 or _la==19):
+                        self._errHandler.recoverInline(self)
+                    else:
+                        self._errHandler.reportMatch(self)
+                        self.consume()
+                    self.state = 133
+                    self.fator() 
+                self.state = 138
+                self._errHandler.sync(self)
+                _alt = self._interp.adaptivePredict(self._input,7,self._ctx)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.unrollRecursionContexts(_parentctx)
+        return localctx
+
+
+    class FatorContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def ABREPAR(self):
+            return self.getToken(CompiladorParser.ABREPAR, 0)
+
+        def expr(self):
+            return self.getTypedRuleContext(CompiladorParser.ExprContext,0)
+
+
+        def FECHAPAR(self):
+            return self.getToken(CompiladorParser.FECHAPAR, 0)
+
+        def SUB(self):
+            return self.getToken(CompiladorParser.SUB, 0)
+
+        def fator(self):
+            return self.getTypedRuleContext(CompiladorParser.FatorContext,0)
+
+
+        def NAO(self):
+            return self.getToken(CompiladorParser.NAO, 0)
+
+        def literal(self):
+            return self.getTypedRuleContext(CompiladorParser.LiteralContext,0)
+
+
+        def IDENT(self):
+            return self.getToken(CompiladorParser.IDENT, 0)
+
+        def getRuleIndex(self):
+            return CompiladorParser.RULE_fator
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterFator" ):
+                listener.enterFator(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitFator" ):
+                listener.exitFator(self)
+
+
+
+
+    def fator(self):
+
+        localctx = CompiladorParser.FatorContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 30, self.RULE_fator)
+        try:
+            self.state = 149
+            self._errHandler.sync(self)
+            token = self._input.LA(1)
+            if token in [12]:
+                self.enterOuterAlt(localctx, 1)
+                self.state = 139
+                self.match(CompiladorParser.ABREPAR)
+                self.state = 140
+                self.expr()
+                self.state = 141
+                self.match(CompiladorParser.FECHAPAR)
+                pass
+            elif token in [17]:
+                self.enterOuterAlt(localctx, 2)
+                self.state = 143
+                self.match(CompiladorParser.SUB)
+                self.state = 144
+                self.fator()
+                pass
+            elif token in [22]:
+                self.enterOuterAlt(localctx, 3)
+                self.state = 145
+                self.match(CompiladorParser.NAO)
+                self.state = 146
+                self.fator()
+                pass
+            elif token in [9, 10]:
+                self.enterOuterAlt(localctx, 4)
+                self.state = 147
+                self.literal()
+                pass
+            elif token in [11]:
+                self.enterOuterAlt(localctx, 5)
+                self.state = 148
+                self.match(CompiladorParser.IDENT)
+                pass
+            else:
+                raise NoViableAltException(self)
+
+        except RecognitionException as re:
+            localctx.exception = re
+            self._errHandler.reportError(self, re)
+            self._errHandler.recover(self, re)
+        finally:
+            self.exitRule()
+        return localctx
+
+
+    class LiteralContext(ParserRuleContext):
+        __slots__ = 'parser'
+
+        def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
+            super().__init__(parent, invokingState)
+            self.parser = parser
+
+        def INT(self):
+            return self.getToken(CompiladorParser.INT, 0)
+
+        def STRING(self):
+            return self.getToken(CompiladorParser.STRING, 0)
+
+        def getRuleIndex(self):
+            return CompiladorParser.RULE_literal
+
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterLiteral" ):
+                listener.enterLiteral(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitLiteral" ):
+                listener.exitLiteral(self)
+
+
+
+
+    def literal(self):
+
+        localctx = CompiladorParser.LiteralContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 32, self.RULE_literal)
+        self._la = 0 # Token type
+        try:
+            self.enterOuterAlt(localctx, 1)
+            self.state = 151
             _la = self._input.LA(1)
             if not(_la==9 or _la==10):
                 self._errHandler.recoverInline(self)
@@ -999,48 +1312,34 @@ class CompiladorParser ( Parser ):
     def sempred(self, localctx:RuleContext, ruleIndex:int, predIndex:int):
         if self._predicates == None:
             self._predicates = dict()
-        self._predicates[8] = self.expressao_sempred
+        self._predicates[9] = self.exprLogico_sempred
+        self._predicates[10] = self.exprAnd_sempred
+        self._predicates[13] = self.exprAritmetica_sempred
+        self._predicates[14] = self.termo_sempred
         pred = self._predicates.get(ruleIndex, None)
         if pred is None:
             raise Exception("No predicate with index:" + str(ruleIndex))
         else:
             return pred(localctx, predIndex)
 
-    def expressao_sempred(self, localctx:ExpressaoContext, predIndex:int):
+    def exprLogico_sempred(self, localctx:ExprLogicoContext, predIndex:int):
             if predIndex == 0:
-                return self.precpred(self._ctx, 14)
+                return self.precpred(self._ctx, 2)
          
 
+    def exprAnd_sempred(self, localctx:ExprAndContext, predIndex:int):
             if predIndex == 1:
-                return self.precpred(self._ctx, 13)
+                return self.precpred(self._ctx, 2)
          
 
+    def exprAritmetica_sempred(self, localctx:ExprAritmeticaContext, predIndex:int):
             if predIndex == 2:
-                return self.precpred(self._ctx, 12)
+                return self.precpred(self._ctx, 2)
          
 
+    def termo_sempred(self, localctx:TermoContext, predIndex:int):
             if predIndex == 3:
-                return self.precpred(self._ctx, 11)
-         
-
-            if predIndex == 4:
-                return self.precpred(self._ctx, 10)
-         
-
-            if predIndex == 5:
-                return self.precpred(self._ctx, 9)
-         
-
-            if predIndex == 6:
-                return self.precpred(self._ctx, 8)
-         
-
-            if predIndex == 7:
-                return self.precpred(self._ctx, 7)
-         
-
-            if predIndex == 8:
-                return self.precpred(self._ctx, 5)
+                return self.precpred(self._ctx, 2)
          
 
 
