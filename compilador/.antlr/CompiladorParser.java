@@ -114,6 +114,14 @@ public class CompiladorParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_programa; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).enterPrograma(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).exitPrograma(this);
+		}
 	}
 
 	public final ProgramaContext programa() throws RecognitionException {
@@ -151,6 +159,14 @@ public class CompiladorParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_bloco; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).enterBloco(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).exitBloco(this);
+		}
 	}
 
 	public final BlocoContext bloco() throws RecognitionException {
@@ -208,6 +224,14 @@ public class CompiladorParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_comando; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).enterComando(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).exitComando(this);
+		}
 	}
 
 	public final ComandoContext comando() throws RecognitionException {
@@ -278,6 +302,14 @@ public class CompiladorParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_leitura; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).enterLeitura(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).exitLeitura(this);
+		}
 	}
 
 	public final LeituraContext leitura() throws RecognitionException {
@@ -322,6 +354,14 @@ public class CompiladorParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_escrita; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).enterEscrita(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).exitEscrita(this);
+		}
 	}
 
 	public final EscritaContext escrita() throws RecognitionException {
@@ -365,6 +405,14 @@ public class CompiladorParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_atribuicao; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).enterAtribuicao(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).exitAtribuicao(this);
+		}
 	}
 
 	public final AtribuicaoContext atribuicao() throws RecognitionException {
@@ -413,6 +461,14 @@ public class CompiladorParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_condicional; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).enterCondicional(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).exitCondicional(this);
+		}
 	}
 
 	public final CondicionalContext condicional() throws RecognitionException {
@@ -472,6 +528,14 @@ public class CompiladorParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_repeticao; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).enterRepeticao(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).exitRepeticao(this);
+		}
 	}
 
 	public final RepeticaoContext repeticao() throws RecognitionException {
@@ -512,6 +576,14 @@ public class CompiladorParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_expr; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).enterExpr(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).exitExpr(this);
+		}
 	}
 
 	public final ExprContext expr() throws RecognitionException {
@@ -548,6 +620,14 @@ public class CompiladorParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_exprLogico; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).enterExprLogico(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).exitExprLogico(this);
+		}
 	}
 
 	public final ExprLogicoContext exprLogico() throws RecognitionException {
@@ -620,6 +700,14 @@ public class CompiladorParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_exprAnd; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).enterExprAnd(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).exitExprAnd(this);
+		}
 	}
 
 	public final ExprAndContext exprAnd() throws RecognitionException {
@@ -715,6 +803,14 @@ public class CompiladorParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_exprIgualdade; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).enterExprIgualdade(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).exitExprIgualdade(this);
+		}
 	}
 
 	public final ExprIgualdadeContext exprIgualdade() throws RecognitionException {
@@ -775,6 +871,14 @@ public class CompiladorParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_exprComparacao; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).enterExprComparacao(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).exitExprComparacao(this);
+		}
 	}
 
 	public final ExprComparacaoContext exprComparacao() throws RecognitionException {
@@ -812,6 +916,14 @@ public class CompiladorParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_exprAritmetica; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).enterExprAritmetica(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).exitExprAritmetica(this);
+		}
 	}
 
 	public final ExprAritmeticaContext exprAritmetica() throws RecognitionException {
@@ -894,6 +1006,14 @@ public class CompiladorParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_termo; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).enterTermo(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).exitTermo(this);
+		}
 	}
 
 	public final TermoContext termo() throws RecognitionException {
@@ -982,6 +1102,14 @@ public class CompiladorParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_fator; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).enterFator(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).exitFator(this);
+		}
 	}
 
 	public final FatorContext fator() throws RecognitionException {
@@ -1058,6 +1186,14 @@ public class CompiladorParser extends Parser {
 			super(parent, invokingState);
 		}
 		@Override public int getRuleIndex() { return RULE_literal; }
+		@Override
+		public void enterRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).enterLiteral(this);
+		}
+		@Override
+		public void exitRule(ParseTreeListener listener) {
+			if ( listener instanceof CompiladorListener ) ((CompiladorListener)listener).exitLiteral(this);
+		}
 	}
 
 	public final LiteralContext literal() throws RecognitionException {

@@ -15,7 +15,7 @@ def main(argv):
         input_text = f.read()
 
     # Mostrar o conteúdo do input
-    print("\n\033[96m=== INPUT ===\033[0m")
+    print("\n\033[96m***************** INPUT *****************\033[0m")
     print(input_text)
 
     # Preparar para o lexer/parser
@@ -30,7 +30,7 @@ def main(argv):
     parser.addErrorListener(MeuErrorListener())
 
     # Mostrar Tokens
-    print("\n\033[92m=== TOKENS ===\033[0m")
+    print("\n\033[92m***************** TOKENS *****************\033[0m")
     lexer.reset()
     stream.fill()
     for token in stream.tokens:
@@ -42,7 +42,7 @@ def main(argv):
     tree = parser.programa()
 
     # Mostrar a árvore sintática no terminal
-    print("\n\033[93m=== ÁRVORE SINTÁTICA ===\033[0m")
+    print("\n\033[93m***************** ÁRVORE SINTÁTICA *****************\033[0m")
     print(tree.toStringTree(recog=parser))
 
     # Gerar o arquivo .dot da AST
