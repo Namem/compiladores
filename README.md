@@ -1,4 +1,3 @@
-
 # Mini LUA
 
 Este repositório contém a implementação de um compilador desenvolvido como parte de um projeto acadêmico. O compilador é construído utilizando ferramentas como ANTLR para geração de analisadores léxicos e sintáticos, e é escrito predominantemente em Python.
@@ -31,14 +30,46 @@ Este repositório contém a implementação de um compilador desenvolvido como p
    ```
 5. Gere os analisadores léxico e sintático utilizando o ANTLR:
    ```bash
-   antlr4 -Dlanguage=Python3 grammar/SeuArquivo.g4 -o .antlr
+   antlr4 -Dlanguage=Python3 grammar/Compilador.g4 -o .antlr
    ```
-   Substitua `SeuArquivo.g4` pelo nome do arquivo de gramática presente no diretório `grammar/`.
 6. Execute o compilador:
    ```bash
-   python driver.py SeuExemplo.txt
+   python driver.py Seuexemplo.txt
    ```
-   Certifique-se de substituir `driver.py` pelo nome do arquivo principal do compilador, caso seja diferente.
+
+## Exemplos de Código Suportado
+
+A gramática implementada permite a criação de programas com comandos como leitura, escrita, atribuição, estruturas condicionais e laços de repetição. Veja alguns exemplos abaixo:
+
+### Leitura e Escrita
+```txt
+leia(x);
+escreva("Resultado:");
+escreva(x);
+```
+
+### Atribuição e Expressões
+```txt
+x = 5 + 3 * 2;
+y = (x - 4) / 2;
+```
+
+### Condicional
+```txt
+se x > 10 entao
+    escreva("Maior que 10");
+senao
+    escreva("Menor ou igual a 10");
+fim
+```
+
+### Repetição
+```txt
+enquanto x < 10 faca
+    escreva(x);
+    x = x + 1;
+fim
+```
 
 ## Contribuição
 
