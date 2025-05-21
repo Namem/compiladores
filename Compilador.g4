@@ -34,7 +34,7 @@ exprAnd
     ;
 
 exprIgualdade
-    : exprComparacao ( (IGUAL | DIFERENTE | MENOR | MENORIGUAL | MAIOR | MAIORIGUAL) exprComparacao )*
+    : exprComparacao ( (IGUAL | DIFERENTE | MENOR | MAIOR) exprComparacao )*
     ;
 
 exprComparacao
@@ -53,8 +53,7 @@ termo
 
 fator
     : ABREPAR expr FECHAPAR       
-    | SUB fator           
-    | NAO fator         
+    | SUB fator              
     | literal            
     | IDENT              
     ;
@@ -98,8 +97,6 @@ IGUAL       : '==';
 DIFERENTE   : '~=';
 MAIOR       : '>';
 MENOR       : '<';
-MAIORIGUAL  : '>=';
-MENORIGUAL  : '<=';
 
 /* Espaços e Comentários */
 WS          : [ \t\r\n]+ -> skip ;
