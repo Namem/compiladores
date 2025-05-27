@@ -1,0 +1,9 @@
+variaveis
+    x:int;
+    y:string;
+    z:int;
+    x:int;
+    
+x=10;
+y="a";
+z=y+10;
