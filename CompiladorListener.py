@@ -1,4 +1,4 @@
-# Generated from Compilador.g4 by ANTLR 4.13.2
+# Generated from ./Compilador.g4 by ANTLR 4.13.2
 from antlr4 import *
 if "." in __name__:
     from .CompiladorParser import CompiladorParser
@@ -14,6 +14,33 @@ class CompiladorListener(ParseTreeListener):
 
     # Exit a parse tree produced by CompiladorParser#programa.
     def exitPrograma(self, ctx:CompiladorParser.ProgramaContext):
+        pass
+
+
+    # Enter a parse tree produced by CompiladorParser#declaracoes.
+    def enterDeclaracoes(self, ctx:CompiladorParser.DeclaracoesContext):
+        pass
+
+    # Exit a parse tree produced by CompiladorParser#declaracoes.
+    def exitDeclaracoes(self, ctx:CompiladorParser.DeclaracoesContext):
+        pass
+
+
+    # Enter a parse tree produced by CompiladorParser#declaracao.
+    def enterDeclaracao(self, ctx:CompiladorParser.DeclaracaoContext):
+        pass
+
+    # Exit a parse tree produced by CompiladorParser#declaracao.
+    def exitDeclaracao(self, ctx:CompiladorParser.DeclaracaoContext):
+        pass
+
+
+    # Enter a parse tree produced by CompiladorParser#tipo.
+    def enterTipo(self, ctx:CompiladorParser.TipoContext):
+        pass
+
+    # Exit a parse tree produced by CompiladorParser#tipo.
+    def exitTipo(self, ctx:CompiladorParser.TipoContext):
         pass
 
 

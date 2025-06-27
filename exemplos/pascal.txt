@@ -1,6 +1,26 @@
-leia(n);
+    variaveis
+    linha:int;
+    i:int;
+    j:int;
+    valor:int;
+    n:int;
 
-enquanto n > 0 faca
-    escreva(n);
-    n = n - 1;
+    escreva("Digite o numero de linhas:");
+    leia(n);
+    linha = 0;
+    enquanto (linha <= n) faca
+        i = 0;
+        enquanto (i <= linha) faca
+            valor= 1;
+            j = 0;
+            enquanto (j < i) faca
+                valor = valor * (linha - j);
+                valor = valor / (j + 1);
+                j = j + 1;
+            fim
+            
+            escreva(valor);
+            i = i + 1;
+        fim
+        linha = linha + 1;
 fim

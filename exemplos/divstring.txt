@@ -1,0 +1,8 @@
+variaveis
+a:int;
+b:string;
+c:int;
+
+a=10;
+b="teste";
+c=a/b;

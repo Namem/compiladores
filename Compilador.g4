@@ -1,7 +1,14 @@
+// Generated from Compilador.g4 by ANTLR 4.13.1
 grammar Compilador;
 
 /* Regras de Início */
-programa : bloco EOF ;
+programa : declaracoes bloco EOF ;
+
+declaracoes : VARIAVEIS (declaracao PONTOVIRGULA)* ;
+
+declaracao : IDENT DOIS_PONTOS tipo ;
+
+tipo : TIPO_INT | TIPO_STRING ;
 
 bloco : (comando)* ;
 
@@ -34,11 +41,11 @@ exprAnd
     ;
 
 exprIgualdade
-    : exprComparacao ( (IGUAL | DIFERENTE | MENOR | MENORIGUAL | MAIOR | MAIORIGUAL) exprComparacao )*
+    : exprComparacao ( (IGUAL | DIFERENTE) exprComparacao )*
     ;
 
 exprComparacao
-    : exprAritmetica
+    : exprAritmetica ( (MENOR | MAIOR | MAIORIGUAL | MENORIGUAL) exprAritmetica )*
     ;
 
 exprAritmetica
@@ -53,8 +60,7 @@ termo
 
 fator
     : ABREPAR expr FECHAPAR       
-    | SUB fator           
-    | NAO fator         
+    | SUB fator              
     | literal            
     | IDENT              
     ;
@@ -65,7 +71,11 @@ literal
     | STRING
     ;
 
-/* Palavras Reservadas (ANTES DO IDENT) */
+/* Palavras Reservadas */
+VARIAVEIS : 'variaveis';
+TIPO_INT  : 'int';
+TIPO_STRING : 'string';
+
 LEIA    : 'leia';
 ESCREVA : 'escreva';
 SE      : 'se';
@@ -86,6 +96,7 @@ IDENT  : [a-zA-Z_][a-zA-Z0-9_]* ;
 ABREPAR     : '(';
 FECHAPAR    : ')';
 PONTOVIRGULA: ';';
+DOIS_PONTOS : ':';
 ATRIBUICAO  : '=';
 SOMA        : '+';
 SUB         : '-';
