@@ -153,10 +153,12 @@ def main(argv):
     # 4) GERAÇÃO DE CÓDIGO LLVM-IR
     print("\n\033[95m***************** GERAÇÃO DE CÓDIGO LLVM-IR *****************\033[0m")
     try:
-        # Passar o target triple para o gerador de código
-        codegen = LLVMCodeGenerator(semantic.symbols, target_triple=target_triple)
-        walker.walk(codegen, tree)
-        llvm_ir = codegen.finalize()
+        # Usar apenas uma instância do gerador com Visitor pattern
+        generator = LLVMCodeGenerator(semantic.symbols, target_triple=target_triple)
+        
+        # Usar visit em vez de walker
+        result = generator.visit(tree)
+        llvm_ir = generator.finalize()
 
         print("\033[92m[CodeGen] Código LLVM-IR gerado com sucesso!\033[0m")
         print(f"\033[96m[CodeGen] Target: {target_triple}\033[0m")
