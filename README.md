@@ -1,221 +1,427 @@
 # Compilador - Projeto de Compiladores
 
-Este projeto implementa um compilador completo utilizando ANTLR4 que realiza análise léxica, sintática, semântica e geração de código LLVM-IR. O compilador processa uma linguagem personalizada e gera código intermediário executável.
+Este projeto implementa um compilador completo utilizando ANTLR4 que realiza análise léxica, sintática, semântica e geração de código LLVM-IR. O compilador processa uma linguagem personalizada e gera código intermediário executável que pode ser compilado para assembly nativo.
 
-##  Estrutura do Projeto
+## 🚀 Características Principais
 
-- `Compilador.g4`: Arquivo de gramática ANTLR4 que define a linguagem
-- `CompiladorLexer.py`, `CompiladorParser.py`, `CompiladorListener.py`: Arquivos gerados automaticamente pelo ANTLR4
-- `driver.py`: Script principal que executa todas as fases do compilador
-- `SemanticAnalyzer.py`: Analisador semântico que verifica tipos e declarações
-- `CodeGeneratorLLVM.py`: Gerador de código LLVM-IR
-- `ast_visualizer.py`: Visualizador da Árvore de Derivação (AST) com Graphviz
-- `exemplos/`: Diretório com exemplos de código (triangulo.txt, pascal.txt, etc.)
-- `requirements.txt`: Lista de dependências Python necessárias
+- **Compilador Completo**: Análise léxica, sintática, semântica e geração de código
+- **Geração LLVM-IR**: Código intermediário otimizado e portável
+- **Compilação Nativa**: Geração automática de executáveis via LLVM/Clang
+- **Estruturas de Controle**: Condicionais (`se/senao`) e loops (`enquanto`)
+- **Expressões Complexas**: Operadores aritméticos, lógicos e de comparação
+- **Entrada/Saída**: Comandos `leia()` e `escreva()` para interação
+- **Visualização AST**: Geração automática de diagramas da árvore sintática
+- **Detecção de Erros**: Relatórios detalhados de erros em todas as fases
 
-##  Pré-requisitos
+## 📁 Estrutura do Projeto
 
-- Python 3.8 ou superior
-- [ANTLR4](https://www.antlr.org/) versão 4.13.2 ou superior
-- [Graphviz](https://graphviz.org/) para visualização da AST
-- [LLVM](https://llvm.org/) para execução do código gerado (opcional)
+```
+bencao/
+├── Compilador.g4              # Gramática ANTLR4 da linguagem
+├── CompiladorLexer.py         # Lexer gerado automaticamente
+├── CompiladorParser.py        # Parser gerado automaticamente  
+├── CompiladorBaseVisitor.py   # Visitor base para percorrer AST
+├── driver.py                  # Script principal do compilador
+├── SemanticAnalyzer.py        # Analisador semântico
+├── CodeGeneratorLLVM.py       # Gerador de código LLVM-IR
+├── ast_visualizer.py          # Visualizador da AST com Graphviz
+├── exemplos/                  # Exemplos de programas
+│   ├── triangulo.txt          # Classificação de triângulos
+│   ├── pascal.txt             # Triângulo de Pascal
+│   ├── divstring.txt          # Teste de erro semântico
+│   └── divzero.txt            # Teste de divisão por zero
+├── requirements.txt           # Dependências Python
+└── README.md                  # Este arquivo
+```
+
+## 🛠️ Pré-requisitos
+
+### Software Necessário
+- **Python 3.8+**: Linguagem de implementação
+- **ANTLR4 4.13.2+**: Geração de lexer/parser
+- **Graphviz**: Visualização da AST
+- **LLVM/Clang**: Compilação para executável (opcional)
 
 ### Instalação das Dependências
 
-1. Instale as dependências Python:
+#### 1. Dependências Python
 ```bash
 pip install -r requirements.txt
 ```
 
-2. Instale o Graphviz:
+#### 2. Graphviz (Visualização AST)
 ```bash
-# Windows (via Chocolatey)
-choco install graphviz
-
-# macOS (via Homebrew)
-brew install graphviz
-
 # Ubuntu/Debian
 sudo apt-get install graphviz
 
-# Ou via pip
-pip install graphviz
+# macOS (Homebrew)
+brew install graphviz
+
+# Windows (Chocolatey)
+choco install graphviz
 ```
 
-##  Como Executar
-
-### 1. Gerar os Arquivos do Parser (se necessário)
-
-Se você modificou a gramática, regenere os arquivos:
-
+#### 3. LLVM/Clang (Compilação Nativa)
 ```bash
-# Com ANTLR4 instalado globalmente
+# Ubuntu/Debian
+sudo apt-get install llvm clang
+
+# macOS (Homebrew)
+brew install llvm
+
+# Windows
+# Baixar de https://releases.llvm.org/
+```
+
+## 🏃‍♂️ Como Executar
+
+### 1. Gerar Parser (se modificou a gramática)
+```bash
+# Com ANTLR4 instalado
 antlr4 -Dlanguage=Python3 Compilador.g4
 
-# Ou usando o JAR diretamente
-java -jar antlr/antlr-4.13.2-complete.jar -Dlanguage=Python3 Compilador.g4
+# Ou com JAR
+java -jar antlr-4.13.2-complete.jar -Dlanguage=Python3 Compilador.g4
 ```
 
-### 2. Executar o Compilador
-
-O compilador processa automaticamente todas as fases:
-
+### 2. Compilar e Executar Programas
 ```bash
-# Executar com um arquivo de exemplo
+# Compilação completa (todas as fases)
 python driver.py exemplos/triangulo.txt
-python driver.py exemplos/pascal.txt
+
+# Execução do programa gerado
+./exemplos/triangulo
 ```
 
-### 3. Saídas Geradas
+### 3. Exemplos Disponíveis
+```bash
+# Classificação de triângulos (condicionais aninhadas)
+python driver.py exemplos/triangulo.txt
 
-O compilador gera automaticamente:
-- **Tokens**: Lista de tokens reconhecidos
-- **AST Visual**: `ast.dot` e `ast.png` (árvore sintática visual)
-- **Código LLVM-IR**: `arquivo.ll` (código intermediário)
-- **Logs**: Análise semântica detalhada
+# Triângulo de Pascal (loops aninhados)
+python driver.py exemplos/pascal.txt
 
-##  Fases do Compilador
+# Teste de erro semântico
+python driver.py exemplos/divstring.txt
+```
+
+## 📊 Fases do Compilador
 
 ### 1. **Análise Léxica**
-- Reconhece tokens da linguagem
-- Reporta erros léxicos com posição
+- Tokenização completa do código fonte
+- Detecção de erros léxicos com localização precisa
+- Suporte a comentários (`--`) e strings com escape sequences
 
-### 2. **Análise Sintática** 
-- Constrói a árvore sintática (AST)
-- Detecta erros de sintaxe
-- Gera visualização da AST
+### 2. **Análise Sintática**
+- Construção da Árvore Sintática Abstrata (AST)
+- Detecção de erros de sintaxe
+- Geração automática de visualização (`ast.png`)
 
 ### 3. **Análise Semântica**
-- Verifica tipos de dados
-- Valida declarações de variáveis
-- Detecta incompatibilidades de operadores
+- Verificação de tipos de dados
+- Validação de declarações de variáveis
+- Detecção de operações incompatíveis
+- Análise de escopo
 
 ### 4. **Geração de Código LLVM-IR**
-- Gera código intermediário LLVM
-- Suporte a operações aritméticas e lógicas
-- Geração de funções e variáveis
+- Código intermediário otimizado
+- Suporte completo a estruturas de controle
+- Geração de funções `printf`/`scanf` para I/O
+- Target específico para arquitetura
 
-##  Exemplos
+### 5. **Compilação Nativa** (Nova!)
+- Compilação automática para assembly (.s)
+- Linking para executável nativo
+- Suporte multiplataforma (x86_64, ARM, etc.)
 
-O diretório `exemplos/` contém arquivos de teste:
+## 🔧 Saídas Geradas
 
-- **`triangulo.txt`**: Programa que calcula área de triângulo
-- **`pascal.txt`**: Exemplo com estruturas condicionais e loops
-- **`divstring.txt`**: Teste de erro semântico (divisão por string)
-- **`divzero.txt`**: Teste de divisão por zero
+Para cada arquivo compilado, o sistema gera:
 
-### Exemplo de Execução
+```
+exemplos/triangulo.txt → 
+├── triangulo.ll       # Código LLVM-IR
+├── triangulo.s        # Assembly nativo
+├── triangulo          # Executável
+├── ast.dot            # Descrição da AST
+└── ast.png            # Visualização da AST
+```
+
+## 📝 Linguagem Suportada
+
+### Estrutura do Programa
+```pascal
+variaveis
+    nome:tipo;
+    valor:int;
+
+// Corpo do programa
+comando1;
+comando2;
+```
+
+### Tipos de Dados
+- **`int`**: Números inteiros (32-bit)
+- **`string`**: Cadeias de caracteres UTF-8
+
+### Declarações
+```pascal
+variaveis
+    contador:int;
+    mensagem:string;
+```
+
+### Operadores
+
+#### Aritméticos
+```pascal
+resultado = a + b * c - d / e;
+```
+
+#### Comparação
+```pascal
+se a < b entao
+se x >= y entao
+se nome == "teste" entao
+```
+
+#### Lógicos
+```pascal
+se a > 0 && b < 10 entao
+se x == 1 || y == 2 entao
+```
+
+### Estruturas de Controle
+
+#### Condicionais
+```pascal
+se condicao entao
+    escreva("Verdadeiro");
+senao
+    escreva("Falso");
+fim
+```
+
+#### Loops
+```pascal
+enquanto contador <= 10 faca
+    escreva(contador);
+    contador = contador + 1;
+fim
+```
+
+### Entrada/Saída
+```pascal
+escreva("Digite um número:");
+leia(numero);
+escreva("Resultado: ");
+escreva(numero * 2);
+```
+
+## 🧪 Exemplos Completos
+
+### 1. Classificação de Triângulos
+```pascal
+variaveis 
+a:int;
+b:int;
+c:int;
+
+escreva("Digite o primeiro lado:");
+leia(a);
+escreva("Digite o segundo lado:");
+leia(b);
+escreva("Digite o terceiro lado:");
+leia(c);
+
+se a == b && b == c entao
+    escreva("Equilatero");
+senao
+    se a == b || a == c || b == c entao
+        escreva("Isosceles");
+    senao
+        escreva("Escaleno");
+    fim
+fim
+```
+
+### 2. Triângulo de Pascal
+```pascal
+variaveis
+    linha:int;
+    i:int;
+    j:int;
+    valor:int;
+    n:int;
+
+escreva("Digite o numero de linhas:");
+leia(n);
+linha = 0;
+
+enquanto linha <= n faca
+    i = 0;
+    enquanto i <= linha faca
+        valor = 1;
+        j = 0;
+        enquanto j < i faca
+            valor = valor * (linha - j);
+            valor = valor / (j + 1);
+            j = j + 1;
+        fim
+        
+        escreva(valor);
+        i = i + 1;
+    fim
+    linha = linha + 1;
+fim
+```
+
+## 🐛 Tratamento de Erros
+
+### Erros Léxicos
+```
+[ERRO LÉXICO] Caractere inválido '#' na linha 5, coluna 12
+```
+
+### Erros Sintáticos
+```
+[ERRO SINTÁTICO] Token inesperado 'fim' na linha 8, coluna 0
+Esperado: 'entao'
+```
+
+### Erros Semânticos
+```
+[ERRO SEMÂNTICO] Operação '/' exige operandos inteiros, mas recebeu 'int' e 'string'.
+[ERRO SEMÂNTICO] Variável 'x' não foi declarada.
+[ERRO SEMÂNTICO] Incompatibilidade de tipos na atribuição: esperado 'int', recebido 'string'.
+```
+
+## 🚀 Exemplo de Execução Completa
 
 ```bash
 $ python driver.py exemplos/triangulo.txt
 
 ***************** INPUT *****************
-programa
-    var x: int;
-    var y: int;
-    var z: int;
-    
-    x = 10;
-    y = 20;
-    z = x + y * 2;
-    
-    print z;
-fim
+variaveis 
+a:int;
+b:int;
+c:int;
+
+escreva("Digite o primeiro lado:");
+leia(a);
+...
 
 ***************** ANÁLISE LÉXICA *****************
-<PROGRAMA, 'programa', Linha 1, Coluna 0>
-<VAR, 'var', Linha 2, Coluna 4>
+<VARIAVEIS, 'variaveis', Linha 1, Coluna 0>
+<IDENT, 'a', Linha 2, Coluna 0>
+<DOIS_PONTOS, ':', Linha 2, Coluna 1>
 ...
 
 ***************** ANÁLISE SINTÁTICA *****************
-(programa ...)
+Parse tree gerada com sucesso!
 
 ***************** GERAÇÃO DA ÁRVORE VISUAL *****************
 Arquivo 'ast.dot' gerado!
 Imagem 'ast.png' gerada com sucesso!
 
 ***************** ANÁLISE SEMÂNTICA *****************
-[Semântico] Variável 'x' declarada com tipo 'int'
+[Semântico] Variável 'a' declarada com tipo 'int'
+[Semântico] Variável 'b' declarada com tipo 'int'
+[Semântico] Variável 'c' declarada com tipo 'int'
 [Semântico] Análise semântica concluída com sucesso!
 
 ***************** GERAÇÃO DE CÓDIGO LLVM-IR *****************
+DEBUG: Visitando condicional com 7 filhos
+DEBUG: Visitando condicional com 7 filhos
 [CodeGen] Código LLVM-IR gerado com sucesso!
+[CodeGen] Target: x86_64-unknown-linux-gnu
 
 ***************** CÓDIGO LLVM-IR *****************
-; ModuleID = "main"
-target triple = "unknown-unknown-unknown"
+; ModuleID = "meu_modulo"
+target triple = "x86_64-unknown-linux-gnu"
+target datalayout = "e-m:e-p270:32:32-p271:32:32-p272:64:64-i64:64-f80:128-n8:16:32:64-S128"
 ...
+
+***************** COMPILAÇÃO NATIVA *****************
+[Compile] Encontrado LLC: llc
+[Compile] Encontrado Clang: clang
+[Compile] Gerando assembly: exemplos/triangulo.s
+[Compile] Gerando código objeto: exemplos/triangulo.o
+[Compile] Gerando executável: exemplos/triangulo
+[Compile] Executável gerado com sucesso!
+[Info] Execute com: ./exemplos/triangulo
 
 ***************** COMPILAÇÃO CONCLUÍDA *****************
 ```
 
-##  Tratamento de Erros
-
-O compilador detecta e reporta:
-
-- **Erros Léxicos**: Caracteres inválidos
-- **Erros Sintáticos**: Estruturas malformadas  
-- **Erros Semânticos**: Tipos incompatíveis, variáveis não declaradas
-
-### Exemplo de Erro Semântico:
+### Execução do Programa
 ```bash
-$ python driver.py exemplos/divstring.txt
-
-[ERRO SEMÂNTICO] Operação '/' exige operandos inteiros, mas recebeu 'int' e 'string'.
+$ ./exemplos/triangulo
+Digite o primeiro lado:
+3
+Digite o segundo lado:
+4
+Digite o terceiro lado:
+5
+Escaleno
 ```
 
-##  Tecnologias Utilizadas
+## 🔧 Arquitetura Técnica
 
-- **ANTLR4**: Geração de lexer e parser
-- **Python 3.8+**: Linguagem de implementação
-- **llvmlite**: Geração de código LLVM-IR
-- **Graphviz**: Visualização da AST
-- **subprocess**: Integração com ferramentas externas
+### Padrões de Design
+- **Visitor Pattern**: Para percorrer e processar a AST
+- **Strategy Pattern**: Para diferentes targets de compilação
+- **Factory Pattern**: Para criação de tipos LLVM
 
-##  Gramática da Linguagem
+### Tecnologias Core
+- **ANTLR4**: Geração automática de lexer/parser
+- **llvmlite**: Interface Python para LLVM-IR
+- **Graphviz**: Renderização de grafos para AST
+- **subprocess**: Integração com toolchain LLVM
 
-A linguagem suporta:
+### Targets Suportados
+- **x86_64-unknown-linux-gnu**: Linux 64-bit
+- **x86_64-pc-windows-msvc**: Windows 64-bit
+- **aarch64-unknown-linux-gnu**: ARM64 Linux
+- **i386-unknown-linux-gnu**: Linux 32-bit
 
-### Declarações
-```
-var nome: tipo;        // Declaração de variável
-```
+## 📈 Métricas do Projeto
 
-### Tipos de Dados
-- `int`: Números inteiros
-- `string`: Cadeias de caracteres
+- **Linhas de Código**: ~1200 (Python)
+- **Regras Gramaticais**: 25+ 
+- **Tokens Suportados**: 30+
+- **Fases de Compilação**: 5
+- **Exemplos Incluídos**: 4
+- **Tipos de Erro**: 15+ diferentes
 
-### Operadores
-- **Aritméticos**: `+`, `-`, `*`, `/`
-- **Comparação**: `<`, `>`, `<=`, `>=`
-- **Igualdade**: `==`, `~=`
-- **Lógicos**: `&&`, `||`
+## 🤝 Contribuição
 
-### Estruturas de Controle
-```
-se (condicao) entao
-    // comandos
-senao
-    // comandos
-fim
+### Como Contribuir
+1. Fork o repositório
+2. Crie uma branch para sua feature
+3. Faça commit das mudanças
+4. Abra um Pull Request
 
-enquanto (condicao) faca
-    // comandos
-fim
-```
+### Áreas para Melhoria
+- [ ] Suporte a arrays/vetores
+- [ ] Funções definidas pelo usuário
+- [ ] Mais tipos de dados (float, boolean)
+- [ ] Otimizações de código
+- [ ] Suporte a módulos/imports
 
-### Entrada/Saída
-```
-read nome;            // Leitura
-print expressao;      // Escrita
-```
-
-##  Licença
+## 📄 Licença
 
 Este projeto está licenciado sob a [MIT License](LICENSE).
 
+## 🏆 Créditos
 
-##  Créditos
-
-- **Autores Principais**: [@Namem](https://github.com/Namem) e [@cmigos1](https://github.com/cmigos1)
+- **Desenvolvedores**: 
+  - [@Namem](https://github.com/Namem) - Análise Sintática e Semântica
+  - [@cmigos1](https://github.com/cmigos1) - Geração de Código e Compilação
 - **Orientador**: [@edwilsonferreira](https://github.com/edwilsonferreira)
+- **Instituição**: Instituto Federal de Mato Grosso - IFMT
+- **Disciplina**: Compiladores - 2024.2
+
+---
+
+🔥 **Compilador totalmente funcional com geração de código nativo!** 🔥

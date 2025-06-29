@@ -98,29 +98,29 @@ scanf_fmt:
 	.type	str_fmt,@object                 # @str_fmt
 	.globl	str_fmt
 str_fmt:
-	.asciz	"%s"
-	.size	str_fmt, 3
+	.asciz	"%s\n"
+	.size	str_fmt, 4
 
 	.type	strlit_6,@object                # @strlit_6
 	.globl	strlit_6
 	.p2align	4, 0x0
 strlit_6:
-	.asciz	"digite o primeiro ponto\\n"
-	.size	strlit_6, 26
+	.asciz	"digite o primeiro ponto"
+	.size	strlit_6, 24
 
 	.type	strlit_7,@object                # @strlit_7
 	.globl	strlit_7
 	.p2align	4, 0x0
 strlit_7:
-	.asciz	"digite o segundo ponto\\n"
-	.size	strlit_7, 25
+	.asciz	"digite o segundo ponto"
+	.size	strlit_7, 23
 
 	.type	strlit_8,@object                # @strlit_8
 	.globl	strlit_8
 	.p2align	4, 0x0
 strlit_8:
-	.asciz	"digite o terceiro ponto\\n"
-	.size	strlit_8, 26
+	.asciz	"digite o terceiro ponto"
+	.size	strlit_8, 24
 
 	.type	strlit_9,@object                # @strlit_9
 	.globl	strlit_9

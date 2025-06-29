@@ -45,7 +45,7 @@ class LLVMCodeGenerator(CompiladorVisitor):
         scanf_ty = ir.FunctionType(ir.IntType(32), [self.voidptr_ty], var_arg=True)
         self.scanf = ir.Function(self.module, scanf_ty, name="scanf")
 
-        # String de formato para inteiros "%d\n\0"
+        # String de formato para inteiros "%d\n\0" (já tem newline)
         fmt = b"%d\n\0"
         self.int_fmt = ir.GlobalVariable(
             self.module,
@@ -71,8 +71,8 @@ class LLVMCodeGenerator(CompiladorVisitor):
             bytearray(scanf_fmt)
         )
 
-        # String de formato para strings "%s\0"
-        str_fmt = b"%s\0"
+        # String de formato para strings "%s\n\0" (adicionar newline)
+        str_fmt = b"%s\n\0"  # Muda de "%s\0" para "%s\n\0"
         self.str_fmt = ir.GlobalVariable(
             self.module,
             ir.ArrayType(ir.IntType(8), len(str_fmt)),
