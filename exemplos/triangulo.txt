@@ -3,11 +3,11 @@ a:int;
 b:int;
 c:int;
 
-escreva ("digite o primeiro ponto");
+escreva("Digite o primeiro lado:");
 leia(a);
-escreva ("digite o segundo ponto");
+escreva("Digite o segundo lado:");
 leia(b);
-escreva ("digite o terceiro ponto");
+escreva("Digite o terceiro lado:");
 leia(c);
 
 se a == b && b == c entao

@@ -284,8 +284,6 @@ class LLVMCodeGenerator(CompiladorVisitor):
             self.builder.call(self.printf, [fmt_ptr, val])
 
     def visitCondicional(self, ctx):
-        print(f"DEBUG: Visitando condicional com {ctx.getChildCount()} filhos")
-        
         # 1. Avaliar a condição
         cond = self.visit(ctx.expr())
         

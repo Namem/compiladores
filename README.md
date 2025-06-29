@@ -1,8 +1,8 @@
-# Compilador - Projeto de Compiladores
+# MiniLua - Projeto de Compiladores
 
 Este projeto implementa um compilador completo utilizando ANTLR4 que realiza análise léxica, sintática, semântica e geração de código LLVM-IR. O compilador processa uma linguagem personalizada e gera código intermediário executável que pode ser compilado para assembly nativo.
 
-## 🚀 Características Principais
+## Características Principais
 
 - **Compilador Completo**: Análise léxica, sintática, semântica e geração de código
 - **Geração LLVM-IR**: Código intermediário otimizado e portável
@@ -13,7 +13,7 @@ Este projeto implementa um compilador completo utilizando ANTLR4 que realiza an�
 - **Visualização AST**: Geração automática de diagramas da árvore sintática
 - **Detecção de Erros**: Relatórios detalhados de erros em todas as fases
 
-## 📁 Estrutura do Projeto
+## Estrutura do Projeto
 
 ```
 bencao/
@@ -34,7 +34,7 @@ bencao/
 └── README.md                  # Este arquivo
 ```
 
-## 🛠️ Pré-requisitos
+## Pré-requisitos
 
 ### Software Necessário
 - **Python 3.8+**: Linguagem de implementação
@@ -73,7 +73,7 @@ brew install llvm
 # Baixar de https://releases.llvm.org/
 ```
 
-## 🏃‍♂️ Como Executar
+## Como Executar
 
 ### 1. Gerar Parser (se modificou a gramática)
 ```bash
@@ -105,7 +105,7 @@ python driver.py exemplos/pascal.txt
 python driver.py exemplos/divstring.txt
 ```
 
-## 📊 Fases do Compilador
+## Fases do Compilador
 
 ### 1. **Análise Léxica**
 - Tokenização completa do código fonte
@@ -129,12 +129,12 @@ python driver.py exemplos/divstring.txt
 - Geração de funções `printf`/`scanf` para I/O
 - Target específico para arquitetura
 
-### 5. **Compilação Nativa** (Nova!)
+### 5. **Compilação Nativa**
 - Compilação automática para assembly (.s)
 - Linking para executável nativo
 - Suporte multiplataforma (x86_64, ARM, etc.)
 
-## 🔧 Saídas Geradas
+## Saídas Geradas
 
 Para cada arquivo compilado, o sistema gera:
 
@@ -147,7 +147,7 @@ exemplos/triangulo.txt →
 └── ast.png            # Visualização da AST
 ```
 
-## 📝 Linguagem Suportada
+## Linguagem Suportada
 
 ### Estrutura do Programa
 ```pascal
@@ -218,7 +218,7 @@ escreva("Resultado: ");
 escreva(numero * 2);
 ```
 
-## 🧪 Exemplos Completos
+## Exemplos Completos
 
 ### 1. Classificação de Triângulos
 ```pascal
@@ -276,7 +276,7 @@ enquanto linha <= n faca
 fim
 ```
 
-## 🐛 Tratamento de Erros
+## Tratamento de Erros
 
 ### Erros Léxicos
 ```
@@ -296,7 +296,7 @@ Esperado: 'entao'
 [ERRO SEMÂNTICO] Incompatibilidade de tipos na atribuição: esperado 'int', recebido 'string'.
 ```
 
-## 🚀 Exemplo de Execução Completa
+## Exemplo de Execução Completa
 
 ```bash
 $ python driver.py exemplos/triangulo.txt
@@ -331,8 +331,6 @@ Imagem 'ast.png' gerada com sucesso!
 [Semântico] Análise semântica concluída com sucesso!
 
 ***************** GERAÇÃO DE CÓDIGO LLVM-IR *****************
-DEBUG: Visitando condicional com 7 filhos
-DEBUG: Visitando condicional com 7 filhos
 [CodeGen] Código LLVM-IR gerado com sucesso!
 [CodeGen] Target: x86_64-unknown-linux-gnu
 
@@ -366,7 +364,7 @@ Digite o terceiro lado:
 Escaleno
 ```
 
-## 🔧 Arquitetura Técnica
+## Arquitetura Técnica
 
 ### Padrões de Design
 - **Visitor Pattern**: Para percorrer e processar a AST
@@ -385,43 +383,19 @@ Escaleno
 - **aarch64-unknown-linux-gnu**: ARM64 Linux
 - **i386-unknown-linux-gnu**: Linux 32-bit
 
-## 📈 Métricas do Projeto
-
-- **Linhas de Código**: ~1200 (Python)
-- **Regras Gramaticais**: 25+ 
-- **Tokens Suportados**: 30+
-- **Fases de Compilação**: 5
-- **Exemplos Incluídos**: 4
-- **Tipos de Erro**: 15+ diferentes
-
-## 🤝 Contribuição
-
-### Como Contribuir
-1. Fork o repositório
-2. Crie uma branch para sua feature
-3. Faça commit das mudanças
-4. Abra um Pull Request
-
-### Áreas para Melhoria
-- [ ] Suporte a arrays/vetores
-- [ ] Funções definidas pelo usuário
-- [ ] Mais tipos de dados (float, boolean)
-- [ ] Otimizações de código
-- [ ] Suporte a módulos/imports
-
-## 📄 Licença
+## Licença
 
 Este projeto está licenciado sob a [MIT License](LICENSE).
 
-## 🏆 Créditos
+## Créditos
 
 - **Desenvolvedores**: 
   - [@Namem](https://github.com/Namem) - Análise Sintática e Semântica
   - [@cmigos1](https://github.com/cmigos1) - Geração de Código e Compilação
 - **Orientador**: [@edwilsonferreira](https://github.com/edwilsonferreira)
 - **Instituição**: Instituto Federal de Mato Grosso - IFMT
-- **Disciplina**: Compiladores - 2024.2
+- **Disciplina**: Compiladores - 2025.1
 
 ---
 
-🔥 **Compilador totalmente funcional com geração de código nativo!** 🔥
+**Compilador totalmente funcional com geração de código nativo!**
