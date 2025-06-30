@@ -3,19 +3,22 @@ a:int;
 b:int;
 c:int;
 
-escreva("Digite o primeiro lado:");
+escreva("Digite o primeiro lado: ");
 leia(a);
-escreva("Digite o segundo lado:");
+escreva("\n");
+escreva("Digite o segundo lado: ");
 leia(b);
-escreva("Digite o terceiro lado:");
+escreva("\n");
+escreva("Digite o terceiro lado: ");
 leia(c);
+escreva("\n");
 
 se a == b && b == c entao
-    escreva("Equilatero");
+    escreva("Equilatero\n");
 senao
     se a == b || a == c || b == c entao
-        escreva("Isosceles");
+        escreva("Isosceles\n");
     senao
-        escreva("Escaleno");
+        escreva("Escaleno\n");
     fim
 fim

@@ -23,4 +23,5 @@
             i = i + 1;
         fim
         linha = linha + 1;
-fim
+        escreva("\n");
+    fim

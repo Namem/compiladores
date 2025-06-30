@@ -6,13 +6,20 @@
 main:                                   # @main
 	.cfi_startproc
 # %bb.0:                                # %entry
-	pushq	%rbx
+	pushq	%r15
 	.cfi_def_cfa_offset 16
+	pushq	%r14
+	.cfi_def_cfa_offset 24
+	pushq	%rbx
+	.cfi_def_cfa_offset 32
 	subq	$32, %rsp
-	.cfi_def_cfa_offset 48
-	.cfi_offset %rbx, -16
+	.cfi_def_cfa_offset 64
+	.cfi_offset %rbx, -32
+	.cfi_offset %r14, -24
+	.cfi_offset %r15, -16
 	movq	strlit_6@GOTPCREL(%rip), %rsi
-	movq	str_fmt@GOTPCREL(%rip), %rdi
+	movq	str_fmt@GOTPCREL(%rip), %rbx
+	movq	%rbx, %rdi
 	xorl	%eax, %eax
 	callq	printf@PLT
 	movq	scanf_fmt@GOTPCREL(%rip), %rdi
@@ -20,12 +27,17 @@ main:                                   # @main
 	xorl	%eax, %eax
 	callq	scanf@PLT
 	movl	$0, 12(%rsp)
-	movq	int_fmt@GOTPCREL(%rip), %rbx
+	movq	int_fmt@GOTPCREL(%rip), %r14
+	movq	strlit_7@GOTPCREL(%rip), %r15
 	jmp	.LBB0_1
 	.p2align	4, 0x90
 .LBB0_9:                                # %loop_end_6
                                         #   in Loop: Header=BB0_1 Depth=1
 	incl	12(%rsp)
+	movq	%rbx, %rdi
+	movq	%r15, %rsi
+	xorl	%eax, %eax
+	callq	printf@PLT
 .LBB0_1:                                # %loop_cond_1
                                         # =>This Loop Header: Depth=1
                                         #     Child Loop BB0_3 Depth 2
@@ -41,7 +53,7 @@ main:                                   # @main
 .LBB0_7:                                # %loop_end_9
                                         #   in Loop: Header=BB0_3 Depth=2
 	movl	16(%rsp), %esi
-	movq	%rbx, %rdi
+	movq	%r14, %rdi
 	xorl	%eax, %eax
 	callq	printf@PLT
 	incl	24(%rsp)
@@ -79,8 +91,12 @@ main:                                   # @main
 .LBB0_8:                                # %loop_end_3
 	xorl	%eax, %eax
 	addq	$32, %rsp
-	.cfi_def_cfa_offset 16
+	.cfi_def_cfa_offset 32
 	popq	%rbx
+	.cfi_def_cfa_offset 24
+	popq	%r14
+	.cfi_def_cfa_offset 16
+	popq	%r15
 	.cfi_def_cfa_offset 8
 	retq
 .Lfunc_end0:
@@ -112,5 +128,11 @@ str_fmt:
 strlit_6:
 	.asciz	"Digite o numero de linhas:"
 	.size	strlit_6, 27
+
+	.type	strlit_7,@object                # @strlit_7
+	.globl	strlit_7
+strlit_7:
+	.asciz	"\n"
+	.size	strlit_7, 2
 
 	.section	".note.GNU-stack","",@progbits

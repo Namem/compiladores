@@ -72,7 +72,7 @@ class LLVMCodeGenerator(CompiladorVisitor):
         )
 
         # String de formato para strings "%s\n\0" (adicionar newline)
-        str_fmt = b"%s\n\0"  # Muda de "%s\0" para "%s\n\0"
+        str_fmt = b"%s\0"  # Muda de "%s\0" para "%s\n\0"
         self.str_fmt = ir.GlobalVariable(
             self.module,
             ir.ArrayType(ir.IntType(8), len(str_fmt)),
@@ -133,6 +133,9 @@ class LLVMCodeGenerator(CompiladorVisitor):
             # Remove aspas da string
             string_content = text[1:-1]  # Remove as aspas duplas
             
+            # Processar escape sequences
+            string_content = self._process_escape_sequences(string_content)
+            
             # Codificar em UTF-8 e calcular tamanho correto
             utf8_bytes = string_content.encode("utf-8")
             size_with_null = len(utf8_bytes) + 1
@@ -152,6 +155,35 @@ class LLVMCodeGenerator(CompiladorVisitor):
                 bytearray(utf8_bytes + b"\0")
             )
             return self.builder.bitcast(gv, self.voidptr_ty)
+
+    def _process_escape_sequences(self, text):
+        """Processa escape sequences em strings"""
+        # Processar escape sequences comuns
+        result = ""
+        i = 0
+        while i < len(text):
+            if text[i] == '\\' and i + 1 < len(text):
+                next_char = text[i + 1]
+                if next_char == 'n':
+                    result += '\n'
+                elif next_char == 't':
+                    result += '\t'
+                elif next_char == 'r':
+                    result += '\r'
+                elif next_char == '\\':
+                    result += '\\'
+                elif next_char == '"':
+                    result += '"'
+                elif next_char == '0':
+                    result += '\0'
+                else:
+                    # Escape sequence desconhecida, manter como está
+                    result += text[i] + next_char
+                i += 2  # Pular o \ e o próximo caractere
+            else:
+                result += text[i]
+                i += 1
+        return result
 
     # Expressões
     def visitExpr(self, ctx):

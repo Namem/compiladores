@@ -10,3 +10,7 @@ __pycache__/
 *.dot
 *.png
 .antlr/
+*.out
+*.ll
+*.s
+

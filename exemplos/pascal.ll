@@ -40,6 +40,9 @@ loop_end_6:
   %"ld_linha.3" = load i32, i32* %"linha"
   %"addtmp.3" = add i32 %"ld_linha.3", 1
   store i32 %"addtmp.3", i32* %"linha"
+  %".26" = bitcast [2 x i8]* @"strlit_7" to i8*
+  %".27" = bitcast [3 x i8]* @"str_fmt" to i8*
+  %".28" = call i32 (i8*, ...) @"printf"(i8* %".27", i8* %".26")
   br label %"loop_cond_1"
 loop_cond_7:
   %"ld_j" = load i32, i32* %"j"
@@ -80,3 +83,4 @@ declare i32 @"scanf"(i8* %".1", ...)
 @"scanf_fmt" = constant [3 x i8] c"%d\00"
 @"str_fmt" = constant [3 x i8] c"%s\00"
 @"strlit_6" = constant [27 x i8] c"Digite o numero de linhas:\00"
+@"strlit_7" = constant [2 x i8] c"\0a\00"

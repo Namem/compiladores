@@ -281,32 +281,6 @@ def main(argv):
 def print_manual_instructions(target_triple=None):
     """Imprime instruções para compilação manual"""
     print(f"\033[93m[Compile] Ferramentas LLVM não encontradas ou não funcionais.\033[0m")
-    print(f"\033[96m=== INFORMAÇÕES DO SISTEMA ===\033[0m")
-    if target_triple:
-        print(f"  Target Triple: {target_triple}")
-    print(f"  Arquitetura: {platform.machine()}")
-    print(f"  Sistema: {platform.system()} {platform.release()}")
-    print(f"\033[96m=== INSTRUÇÕES DE INSTALAÇÃO ===\033[0m")
-    print(f"\033[93mWindows:\033[0m")
-    print(f"  1. Baixe LLVM de: https://releases.llvm.org/download.html")
-    print(f"  2. Instale e adicione ao PATH")
-    print(f"  3. Ou use: choco install llvm")
-    print(f"  4. Ou use: winget install LLVM.LLVM")
-    print(f"\033[93mmacOS:\033[0m")
-    print(f"  brew install llvm")
-    print(f"\033[93mUbuntu/Debian:\033[0m")
-    print(f"  sudo apt-get install llvm clang")
-    print(f"\033[96m=== COMPILAÇÃO MANUAL ===\033[0m")
-    if target_triple:
-        print(f"  1. llc arquivo.ll -o arquivo.s -mtriple={target_triple}")
-    else:
-        print(f"  1. llc arquivo.ll -o arquivo.s")
-    print(f"  2. clang -c arquivo.s -o arquivo.o") 
-    print(f"  3. clang arquivo.o -o arquivo.exe")
-    print(f"\033[96m=== ALTERNATIVAS ===\033[0m")
-    print(f"  - Use interpretador LLVM: lli arquivo.ll")
-    print(f"  - Use compilador online: https://godbolt.org")
-    print(f"  - Use Docker com LLVM pré-instalado")
 
 if __name__ == '__main__':
     main(sys.argv)
