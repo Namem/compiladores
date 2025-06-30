@@ -279,7 +279,6 @@ def main(argv):
     print("\n\033[92m***************** COMPILAÇÃO CONCLUÍDA *****************\033[0m")
 
 def print_manual_instructions(target_triple=None):
-    """Imprime instruções para compilação manual"""
     print(f"\033[93m[Compile] Ferramentas LLVM não encontradas ou não funcionais.\033[0m")
 
 if __name__ == '__main__':
