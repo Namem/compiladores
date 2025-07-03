@@ -1,0 +1,21 @@
+variaveis
+    numero:int;
+    fatorial:int;
+    i:int;
+
+escreva("Digite um numero: ");
+leia(numero);
+
+fatorial = 1;  -- Inicializar com 1
+i = numero;
+
+enquanto i > 1 faca
+    fatorial = fatorial * i;  -- Acumular o produto
+    i = i - 1;
+fim
+
+escreva("Fatorial de ");
+escreva(numero);
+escreva(" = ");
+escreva(fatorial);
+escreva("\n");

@@ -264,22 +264,17 @@ def main(argv):
                 else:
                     print(f"\033[93m[Compile] Clang não conseguiu compilar LLVM-IR diretamente\033[0m")
                     print(f"\033[93m[Compile] {result.stderr}\033[0m")
-                    print_manual_instructions(target_triple)
             else:
-                print_manual_instructions(target_triple)
+                print(f"\033[93m[Compile] Ferramentas LLVM não encontradas ou não funcionais.\033[0m")
                 
         except Exception as e:
             print(f"\033[93m[Compile] Erro na compilação: {e}\033[0m")
-            print_manual_instructions(target_triple)
 
     except Exception as e:
         print(f"\033[91m[CodeGen] ERRO na geração de código: {e}\033[0m")
         sys.exit(1)
 
     print("\n\033[92m***************** COMPILAÇÃO CONCLUÍDA *****************\033[0m")
-
-def print_manual_instructions(target_triple=None):
-    print(f"\033[93m[Compile] Ferramentas LLVM não encontradas ou não funcionais.\033[0m")
 
 if __name__ == '__main__':
     main(sys.argv)

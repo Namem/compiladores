@@ -45,8 +45,7 @@ class LLVMCodeGenerator(CompiladorVisitor):
         scanf_ty = ir.FunctionType(ir.IntType(32), [self.voidptr_ty], var_arg=True)
         self.scanf = ir.Function(self.module, scanf_ty, name="scanf")
 
-        # String de formato para inteiros "%d\n\0" (já tem newline)
-        fmt = b"%d\n\0"
+        fmt = b"%d\0"
         self.int_fmt = ir.GlobalVariable(
             self.module,
             ir.ArrayType(ir.IntType(8), len(fmt)),
@@ -71,8 +70,21 @@ class LLVMCodeGenerator(CompiladorVisitor):
             bytearray(scanf_fmt)
         )
 
-        # String de formato para strings "%s\n\0" (adicionar newline)
-        str_fmt = b"%s\0"  # Muda de "%s\0" para "%s\n\0"
+        # String de formato para scanf de strings "%s\0" 
+        scanf_str_fmt = b"%s\0"
+        self.scanf_str_fmt = ir.GlobalVariable(
+            self.module,
+            ir.ArrayType(ir.IntType(8), len(scanf_str_fmt)),
+            name="scanf_str_fmt"
+        )
+        self.scanf_str_fmt.global_constant = True
+        self.scanf_str_fmt.initializer = ir.Constant(
+            ir.ArrayType(ir.IntType(8), len(scanf_str_fmt)),
+            bytearray(scanf_str_fmt)
+        )
+
+        # String de formato para strings "%s\0"
+        str_fmt = b"%s\0"  # 
         self.str_fmt = ir.GlobalVariable(
             self.module,
             ir.ArrayType(ir.IntType(8), len(str_fmt)),
@@ -114,9 +126,13 @@ class LLVMCodeGenerator(CompiladorVisitor):
         ty = self.symbols[name]
         if ty == "int":
             ptr = self.builder.alloca(ir.IntType(32), name=name)
-        else:
-            # para string a gente armazena ponteiro i8*
-            ptr = self.builder.alloca(self.voidptr_ty, name=name)
+        else:  # string
+            # Alocar buffer de 256 bytes para string
+            string_buffer_size = 256
+            ptr = self.builder.alloca(
+                ir.ArrayType(ir.IntType(8), string_buffer_size), 
+                name=name
+            )
         self.vars[name] = ptr
 
     # Bloco de comandos
@@ -157,7 +173,6 @@ class LLVMCodeGenerator(CompiladorVisitor):
             return self.builder.bitcast(gv, self.voidptr_ty)
 
     def _process_escape_sequences(self, text):
-        """Processa escape sequences em strings"""
         # Processar escape sequences comuns
         result = ""
         i = 0
@@ -276,7 +291,13 @@ class LLVMCodeGenerator(CompiladorVisitor):
             # Carrega a partir do alloca criado em visitDeclaracao
             name = ctx.IDENT().getText()
             ptr = self.vars[name]
-            return self.builder.load(ptr, name="ld_" + name)
+            ty = self.symbols[name]
+            
+            if ty == "int":
+                return self.builder.load(ptr, name="ld_" + name)
+            else:  # string
+                # Para strings, retornar ponteiro para o primeiro caractere
+                return self.builder.gep(ptr, [ir.Constant(ir.IntType(32), 0), ir.Constant(ir.IntType(32), 0)])
         elif ctx.literal():
             return self.visit(ctx.literal())
         elif ctx.expr():
@@ -290,17 +311,29 @@ class LLVMCodeGenerator(CompiladorVisitor):
         name = ctx.IDENT().getText()
         ptr = self.vars[name]
         val = self.visit(ctx.expr())
-        self.builder.store(val, ptr)
+        ty = self.symbols[name]
+        
+        if ty == "int":
+            self.builder.store(val, ptr)
+        else:
+
+            dest_ptr = self.builder.gep(ptr, [ir.Constant(ir.IntType(32), 0), ir.Constant(ir.IntType(32), 0)])
+            pass
 
     def visitLeitura(self, ctx):
         name = ctx.IDENT().getText()
         ptr = self.vars[name]
+        ty = self.symbols[name]
         
-        # Preparar formato para scanf
-        scanf_fmt_ptr = self.builder.bitcast(self.scanf_fmt, self.voidptr_ty)
-        
-        # Chamar scanf
-        self.builder.call(self.scanf, [scanf_fmt_ptr, ptr])
+        if ty == "int":
+            # Leitura de inteiro
+            scanf_fmt_ptr = self.builder.bitcast(self.scanf_fmt, self.voidptr_ty)
+            self.builder.call(self.scanf, [scanf_fmt_ptr, ptr])
+        else:  # string
+            # Leitura de string - usar ponteiro para o primeiro elemento do array
+            string_ptr = self.builder.gep(ptr, [ir.Constant(ir.IntType(32), 0), ir.Constant(ir.IntType(32), 0)])
+            scanf_str_fmt_ptr = self.builder.bitcast(self.scanf_str_fmt, self.voidptr_ty)
+            self.builder.call(self.scanf, [scanf_str_fmt_ptr, string_ptr])
 
     def visitEscrita(self, ctx):
         val = self.visit(ctx.expr())

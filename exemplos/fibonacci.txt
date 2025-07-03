@@ -1,0 +1,36 @@
+variaveis
+    n:int;
+    i:int;
+    primeiro:int;
+    segundo:int;
+    proximo:int;
+
+escreva("Digite o numero de termos da sequencia de Fibonacci:\n");
+leia(n);
+
+se n >= 1 entao
+    primeiro = 1;  -- Primeiro termo = 1
+    escreva("Fibonacci: ");
+    escreva(primeiro);
+    escreva(" ");
+    
+    se n >= 2 entao
+        segundo = 1;  -- Segundo termo = 1
+        escreva(segundo);
+        escreva(" ");
+        
+        i = 3;
+        enquanto i <= n faca
+            proximo = primeiro + segundo;
+            escreva(proximo);
+            escreva(" ");
+            
+            primeiro = segundo;
+            segundo = proximo;
+            i = i + 1;
+        fim
+    fim
+    escreva("\n");
+senao
+    escreva("Numero deve ser maior que 0\n");
+fim
