@@ -22,7 +22,6 @@ bencao/
 ├── CompiladorLexer.py         # Lexer gerado automaticamente
 ├── CompiladorParser.py        # Parser gerado automaticamente  
 ├── CompiladorListener.py      # Listener base gerado pelo ANTLR4
-├── CompiladorBaseVisitor.py   # Visitor base gerado pelo ANTLR4
 ├── driver.py                  # Script principal do compilador
 ├── SemanticAnalyzer.py        # Analisador semântico (Listener Pattern)
 ├── CodeGeneratorLLVM.py       # Gerador de código LLVM-IR (Visitor Pattern)
@@ -48,7 +47,6 @@ bencao/
 
 #### 2. **Visitor Pattern** (Geração de Código)
 - **Arquivo**: `CodeGeneratorLLVM.py`
-- **Herança**: `CompiladorBaseVisitor`
 - **Função**: Controle manual da travessia da AST
 - **Métodos**: `visitPrograma()`, `visitCondicional()`, `visitExpr()`, etc.
 
