@@ -1,4 +1,4 @@
-# MiniLua - Projeto de Compiladores
+# Quimera - Projeto de Compiladores
 
 Este projeto implementa um compilador completo utilizando ANTLR4 que realiza análise léxica, sintática, semântica e geração de código LLVM-IR. O compilador processa uma linguagem personalizada e gera código intermediário executável que pode ser compilado para assembly nativo.
 
