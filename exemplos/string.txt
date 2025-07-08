@@ -5,3 +5,4 @@ escreva("digite um nome: ");
 leia (nome);
 escreva ("bom dia, ");
 escreva (nome);
+escreva("\n");
