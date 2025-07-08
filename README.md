@@ -471,21 +471,11 @@ Fibonacci: 1 1 2 3 5 8 13 21 34 55
 "e-m:e-i8:8:32-i16:16:32-i64:64-i128:128-n32:64-S128"
 ```
 
-## Métricas do Projeto
-
-- **Linhas de Código**: ~1500 (Python) + ~150 (Gramática)
-- **Regras Gramaticais**: 25+ 
-- **Tokens Definidos**: 30+
-- **Fases de Compilação**: 5 completas
-- **Exemplos Funcionais**: 4+ programas
-- **Tipos de Erro Detectados**: 15+ diferentes
-- **Padrões de Design**: 2 (Listener + Visitor)
-
 ## Créditos
 
 - **Desenvolvedores**: 
   - [@Namem](https://github.com/Namem) - Análise Sintática e Semântica
   - [@cmigos1](https://github.com/cmigos1) - Geração de Código e Compilação
 - **Orientador**: [@edwilsonferreira](https://github.com/edwilsonferreira)
-- **Instituição**: Universidade Federal de Mato Grosso (IFMT)
+- **Instituição**: Instituto Federal de Mato Grosso (IFMT)
 - **Disciplina**: Compiladores - 2024.1
